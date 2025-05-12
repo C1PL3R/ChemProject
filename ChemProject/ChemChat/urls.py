@@ -5,6 +5,6 @@ from .views_classes.add_contact_view import AddContactView
 
 urlpatterns = [
     path('', ChatView.as_view(), name='chat'),
-    path('chat/<str:chat_id>/', ChatWithIDView.as_view(), name='chat_with_id'),
+    path('<int:chat_id>/', ChatWithIDView.as_view(), name='chat_with_id'),
     path('add_contact/', AddContactView.as_view(), name='add_contact'),
 ]

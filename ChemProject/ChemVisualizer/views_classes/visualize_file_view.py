@@ -11,4 +11,4 @@ class VisualizeFileView(View):
         sdf_file = request.FILES['sdf_file']
         sdf_data = sdf_file.read().decode('utf-8')
         request.session['sdf_data'] = sdf_data
-        return redirect('visualize_sdf')
+        return redirect('visualize_file')

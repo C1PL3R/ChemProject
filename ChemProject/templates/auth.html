@@ -12,7 +12,7 @@
 {% block body %}
 <span id="title" style="display: none;">ChemVisualizer | Реєстрація хіміка 😊</span>
 
-<form id="registerForm" action="javascript:void(0);">
+<form id="registerForm" action="javascript:void(0);" method="post">
     <h1 style="color: white; font-size: 20px; text-align: center; width: 100%;">Реєстрація/вхід</h1>
     <div id="contact-message"></div>
     {% csrf_token %}
@@ -27,22 +27,22 @@
     </div>
     
     <div class="email-container">
-        <input type="email" class="email_input" placeholder="Email" name="email" id='email' required />
+        <input type="email" class="email_input" placeholder="Email" name="email" id='email'/>
         <label for="email" class="email_label">Email</label>
     </div>
 
     <div class="phone-container">
-        <input type="tel" class="phone_input" placeholder="Телефон" name="phone" id='phone_number' required />
+        <input type="tel" class="phone_input" placeholder="Телефон" name="phone" id='phone'/>
         <label for="phone" class="phone_label">Телефон</label>
     </div>
 
     <div class="first-name-container">
-        <input type="text" class="first-name_input" placeholder="Ім'я" name="first_name" id='first_name' />
+        <input type="text" class="first-name_input" placeholder="Ім'я" name="first_name" id='first_name'/>
         <label for="first-name" class="first-name_label">Ім'я</label>
     </div>
 
     <div class="last-name-container">
-        <input type="text" class="last-name_input" placeholder="Прізвище" name="last_name" id='last_name' />
+        <input type="text" class="last-name_input" placeholder="Прізвище" name="last_name" id='last_name'/>
         <label for="last-name" class="last-name_label">Прізвище</label>
     </div>
 

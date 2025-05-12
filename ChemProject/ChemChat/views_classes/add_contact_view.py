@@ -27,16 +27,19 @@ class AddContactView(View):
         phone = remove_formatting(phone_number)
         print(f"Username: {username}, Phone: {phone}")
         
-        contact = Chemist.objects.filter(username=username, phone=phone).first()
+        chemist_contact = Chemist.objects.filter(username=username, phone=phone).first()
 
-        if not contact:
+        if not chemist_contact:
             return JsonResponse({'error': 'Користувача не знайдено!'}, status=400)
 
-        contact = Contact.objects.filter(user=current_user, contact=contact).first()
+        if chemist_contact == current_user:
+            return JsonResponse({'error': 'Не можна додати себе!'}, status=400)
 
-        if contact:
+        existing_chat = Contact.objects.filter(user=current_user, contact=chemist_contact).first()
+
+        if existing_chat:
             return JsonResponse({'error': 'Чат із цим користувачем вже створено!'}, status=400)
-        else:
-            Contact.objects.create(user=current_user, contact=contact)
 
-        return JsonResponse({'success': f'Чат створено з {contact.username}!'}, status=200)
+        Contact.objects.create(user=current_user, contact=chemist_contact)
+
+        return JsonResponse({'success': f'Чат створено з {chemist_contact.username}!'}, status=200)

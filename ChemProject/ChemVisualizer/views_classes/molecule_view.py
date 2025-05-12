@@ -7,7 +7,7 @@ from rdkit.Chem import AllChem
 import pubchempy as pcp
 
 class MoleculeView(View):
-    def get(request):
+    def get(self, request):
         name = request.COOKIES.get('moleculeName')
         smiles = request.COOKIES.get('moleculeSmiles')
 
@@ -62,7 +62,7 @@ class MoleculeView(View):
                 'sids': None,
             }
 
-        response = render(request, 'ChemVisualizer/molecule.html', context)
+        response = render(request, 'ChemVisualizer/molecule_view.html', context)
         # response.delete_cookie('moleculeName', path='/')
         # response.delete_cookie('moleculeSmiles', path='/')
         return response

@@ -121,7 +121,7 @@ document.getElementById("addContactForm").addEventListener("submit", function (e
     messageDiv.textContent = "";
     messageDiv.style.display = "flex";
 
-    axios.post("/add-contact/", {
+    axios.post(window.location.origin + "/chat/add_contact/", {
         "username": username,
         "phone_number": phone_number,
     }, {

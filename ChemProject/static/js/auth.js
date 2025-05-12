@@ -2,7 +2,7 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
     e.preventDefault();
 
     var username = document.getElementById("username").value;
-    var phone_number = document.getElementById("phone_number").value;
+    var phone = document.getElementById("phone").value;
     var password = document.getElementById("password").value;
     var email = document.getElementById("email").value;
     var first_name = document.getElementById("first_name").value;
@@ -12,9 +12,9 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
     messageDiv.textContent = "";
     messageDiv.style.display = "flex";
 
-    axios.post("/auth/", {
+    axios.post(window.location.origin + "/auth-post/", {
         "username": username,
-        "phone_number": phone_number,
+        "phone": phone,
         "password": password,
         "email": email,
         "first_name": first_name,
@@ -25,12 +25,6 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
             "Content-Type": "application/json"
         }
     })
-        .then(function (response) {
-            messageDiv.textContent = response.data.success;
-            messageDiv.style.display = "flex";
-            messageDiv.style.color = "green";
-            window.location.href = window.location.origin + "/chat/";
-        })
         .catch(function (error) {
             const msg = error.response?.data?.error || "Сталася помилка!";
             messageDiv.textContent = msg;
@@ -38,6 +32,8 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
             messageDiv.style.color = "red";
         });
 });
+
+console.log(window.location.origin + "/auth/")
 
 function getCookie(name) {
     let cookieValue = null;
@@ -54,8 +50,8 @@ function getCookie(name) {
     return cookieValue;
 }
 
-document.getElementById("phone_number").addEventListener("input", function () {
-    const phoneInput = document.getElementById("phone_number");
+document.getElementById("phone").addEventListener("input", function () {
+    const phoneInput = document.getElementById("phone");
     const formattedNumber = formatUAPhone(phoneInput.value);
     phoneInput.value = formattedNumber;
 });

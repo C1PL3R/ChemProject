@@ -36,6 +36,9 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
+    'channels',
+    
     'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -50,7 +53,6 @@ INSTALLED_APPS = [
     'core',
     
     'rest_framework',
-    "channels",
 ]
 
 MIDDLEWARE = [

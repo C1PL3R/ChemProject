@@ -18,8 +18,21 @@ class ChatWithIDView(View):
         else:
             receiver = chat.user
             sender = chat.contact
-            
-        messages_list = Message.objects.filter(chat_id=chat_id)
+        
+        try:
+            messages_list = Message.objects.filter(chat_id=int(chat_id))
+        except Exception:
+            context = {
+                'contacts': contact_list,
+                'chat_id': chat_id,
+                'sender_id': sender.id,
+                'receiver_id': receiver.id,
+                'sender_name': sender.username,
+                'receiver_name': receiver.username,
+                'receiver_phone': receiver.phone,
+            }
+
+            return render(request, 'ChemChat/chat.html', context)
 
         context = {
             'contacts': contact_list,
@@ -32,4 +45,4 @@ class ChatWithIDView(View):
             'message_list': messages_list,
         }
 
-        return render(request, 'chat.html', context)
+        return render(request, 'ChemChat/chat.html', context)

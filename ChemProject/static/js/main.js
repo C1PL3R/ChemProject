@@ -24,7 +24,7 @@ function setMoleculeCookies(name, smiles) {
 function OpenModel(name, smiles) {
 	setMoleculeCookies(name, smiles)
 
-	window.location.href = window.location.origin + '/view_molecule/'
+	window.location.href = window.location.origin + '/visualizer/'
 }
 
 document.getElementById("sendNameBtn").addEventListener("click", function () {
@@ -51,7 +51,7 @@ document.getElementById("sendNameBtn").addEventListener("click", function () {
 			document.getElementById("sendNameBtn").style.display = "none";
 
 			const link = document.getElementById("moleculeLinkName");
-			link.href = "/view_molecule/";
+			link.href = "/visualizer/";
 			link.style.display = "inline";
 		} else {
 			Swal.fire({
@@ -101,7 +101,7 @@ document.getElementById("sendFormulaBtn").addEventListener("click", function () 
 			document.getElementById("sendFormulaBtn").style.display = "none";
 
 			const link = document.getElementById("moleculeLinkFormula");
-			link.href = "/view_molecule/";
+			link.href = "/visualizer/";
 			link.style.display = "inline";
 		} else {
 			Swal.fire({
