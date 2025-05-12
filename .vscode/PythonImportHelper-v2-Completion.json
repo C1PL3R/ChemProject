@@ -1,0 +1,1607 @@
+[
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "Chemist",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Contact",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Contact",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Contact",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Contact",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Contact",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Molecule",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Molecule",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Chemist",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Chemist",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Chemist",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Contact",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Molecule",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Molecule",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Molecule",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncWebsocketConsumer",
+        "importPath": "channels.generic.websocket",
+        "description": "channels.generic.websocket",
+        "isExtraImport": true,
+        "detail": "channels.generic.websocket",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "re_path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "ProtocolTypeRouter",
+        "importPath": "channels.routing",
+        "description": "channels.routing",
+        "isExtraImport": true,
+        "detail": "channels.routing",
+        "documentation": {}
+    },
+    {
+        "label": "URLRouter",
+        "importPath": "channels.routing",
+        "description": "channels.routing",
+        "isExtraImport": true,
+        "detail": "channels.routing",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "AuthMiddlewareStack",
+        "importPath": "channels.auth",
+        "description": "channels.auth",
+        "isExtraImport": true,
+        "detail": "channels.auth",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Chem",
+        "importPath": "rdkit",
+        "description": "rdkit",
+        "isExtraImport": true,
+        "detail": "rdkit",
+        "documentation": {}
+    },
+    {
+        "label": "Chem",
+        "importPath": "rdkit",
+        "description": "rdkit",
+        "isExtraImport": true,
+        "detail": "rdkit",
+        "documentation": {}
+    },
+    {
+        "label": "AllChem",
+        "importPath": "rdkit.Chem",
+        "description": "rdkit.Chem",
+        "isExtraImport": true,
+        "detail": "rdkit.Chem",
+        "documentation": {}
+    },
+    {
+        "label": "AllChem",
+        "importPath": "rdkit.Chem",
+        "description": "rdkit.Chem",
+        "isExtraImport": true,
+        "detail": "rdkit.Chem",
+        "documentation": {}
+    },
+    {
+        "label": "pubchempy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pubchempy",
+        "description": "pubchempy",
+        "detail": "pubchempy",
+        "documentation": {}
+    },
+    {
+        "label": "tempfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tempfile",
+        "description": "tempfile",
+        "detail": "tempfile",
+        "documentation": {}
+    },
+    {
+        "label": "mesh",
+        "importPath": "stl",
+        "description": "stl",
+        "isExtraImport": true,
+        "detail": "stl",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "pi",
+        "importPath": "math",
+        "description": "math",
+        "isExtraImport": true,
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "sin",
+        "importPath": "math",
+        "description": "math",
+        "isExtraImport": true,
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "cos",
+        "importPath": "math",
+        "description": "math",
+        "isExtraImport": true,
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "django.contrib.auth.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "AbstractUser",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "django.contrib.auth.validators",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.contrib.auth.validators",
+        "description": "django.contrib.auth.validators",
+        "detail": "django.contrib.auth.validators",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "django.utils.timezone",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "check_password",
+        "importPath": "django.contrib.auth.hashers",
+        "description": "django.contrib.auth.hashers",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.hashers",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "routers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "viewsets",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "handler400",
+        "importPath": "django.conf.urls",
+        "description": "django.conf.urls",
+        "isExtraImport": true,
+        "detail": "django.conf.urls",
+        "documentation": {}
+    },
+    {
+        "label": "handler403",
+        "importPath": "django.conf.urls",
+        "description": "django.conf.urls",
+        "isExtraImport": true,
+        "detail": "django.conf.urls",
+        "documentation": {}
+    },
+    {
+        "label": "handler404",
+        "importPath": "django.conf.urls",
+        "description": "django.conf.urls",
+        "isExtraImport": true,
+        "detail": "django.conf.urls",
+        "documentation": {}
+    },
+    {
+        "label": "handler500",
+        "importPath": "django.conf.urls",
+        "description": "django.conf.urls",
+        "isExtraImport": true,
+        "detail": "django.conf.urls",
+        "documentation": {}
+    },
+    {
+        "label": "api_view",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "AddContactView",
+        "kind": 6,
+        "importPath": "ChemProject.ChemChat.views_classes.add_contact_view",
+        "description": "ChemProject.ChemChat.views_classes.add_contact_view",
+        "peekOfCode": "class AddContactView(View):\n    def post(self, request):\n        current_user = request.user\n        try:\n            data = json.loads(request.body)\n        except json.JSONDecodeError:\n            return JsonResponse({'error': 'Некоректні дані'}, status=400)\n        username = data.get('username')\n        phone_number = data.get('phone_number')\n        phone = remove_formatting(phone_number)",
+        "detail": "ChemProject.ChemChat.views_classes.add_contact_view",
+        "documentation": {}
+    },
+    {
+        "label": "remove_formatting",
+        "kind": 2,
+        "importPath": "ChemProject.ChemChat.views_classes.add_contact_view",
+        "description": "ChemProject.ChemChat.views_classes.add_contact_view",
+        "peekOfCode": "def remove_formatting(phone_number):\n    cleaned = re.sub(r'\\D', '', phone_number)\n    return cleaned\nclass AddContactView(View):\n    def post(self, request):\n        current_user = request.user\n        try:\n            data = json.loads(request.body)\n        except json.JSONDecodeError:\n            return JsonResponse({'error': 'Некоректні дані'}, status=400)",
+        "detail": "ChemProject.ChemChat.views_classes.add_contact_view",
+        "documentation": {}
+    },
+    {
+        "label": "ChatView",
+        "kind": 6,
+        "importPath": "ChemProject.ChemChat.views_classes.chat_view",
+        "description": "ChemProject.ChemChat.views_classes.chat_view",
+        "peekOfCode": "class ChatView(View):\n    def get(self, request):\n        if request.user.is_authenticated:\n            contact_list = Contact.objects.filter(user=request.user.id)\n            if not contact_list:\n                contact_list = Contact.objects.filter(contact=request.user.id)\n            if contact_list:\n                contact = contact_list.first()\n                if contact.user == request.user:\n                    receiver = contact.contact",
+        "detail": "ChemProject.ChemChat.views_classes.chat_view",
+        "documentation": {}
+    },
+    {
+        "label": "ChatWithIDView",
+        "kind": 6,
+        "importPath": "ChemProject.ChemChat.views_classes.chat_with_chat_id_view",
+        "description": "ChemProject.ChemChat.views_classes.chat_with_chat_id_view",
+        "peekOfCode": "class ChatWithIDView(View):\n    def get(self, request, chat_id):\n        contact_list = Contact.objects.filter(user=request.user.id)\n        if not contact_list:\n            contact_list = Contact.objects.filter(contact=request.user.id)\n        chat = contact_list.get(id=chat_id)\n        if chat.user == request.user:\n            receiver = chat.contact\n            sender = chat.user\n        else:",
+        "detail": "ChemProject.ChemChat.views_classes.chat_with_chat_id_view",
+        "documentation": {}
+    },
+    {
+        "label": "ChemchatConfig",
+        "kind": 6,
+        "importPath": "ChemProject.ChemChat.apps",
+        "description": "ChemProject.ChemChat.apps",
+        "peekOfCode": "class ChemchatConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'ChemChat'",
+        "detail": "ChemProject.ChemChat.apps",
+        "documentation": {}
+    },
+    {
+        "label": "ChatConsumer",
+        "kind": 6,
+        "importPath": "ChemProject.ChemChat.consumers",
+        "description": "ChemProject.ChemChat.consumers",
+        "peekOfCode": "class ChatConsumer(AsyncWebsocketConsumer):\n    async def connect(self):\n        self.room_name = self.scope['url_route']['kwargs']['room_name']\n        self.room_group_name = f'chat_{self.room_name}'\n        # Приєднуємо користувача до групи\n        await self.channel_layer.group_add(\n            self.room_group_name,\n            self.channel_name\n        )\n        await self.accept()",
+        "detail": "ChemProject.ChemChat.consumers",
+        "documentation": {}
+    },
+    {
+        "label": "websocket_urlpatterns",
+        "kind": 5,
+        "importPath": "ChemProject.ChemChat.routing",
+        "description": "ChemProject.ChemChat.routing",
+        "peekOfCode": "websocket_urlpatterns = [\n    re_path(r'ws/chat/(?P<chat_id>\\w+)/$', consumers.ChatConsumer.as_asgi()),\n]",
+        "detail": "ChemProject.ChemChat.routing",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "ChemProject.ChemChat.urls",
+        "description": "ChemProject.ChemChat.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', ChatView.as_view(), name='chat'),\n    path('chat/<str:chat_id>/', ChatWithIDView.as_view(), name='chat_with_id'),\n    path('add_contact/', AddContactView.as_view(), name='add_contact'),\n]",
+        "detail": "ChemProject.ChemChat.urls",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentView",
+        "kind": 6,
+        "importPath": "ChemProject.ChemDocument.views_classes.document_view",
+        "description": "ChemProject.ChemDocument.views_classes.document_view",
+        "peekOfCode": "class DocumentView(View):\n    def get(self, request):\n        if request.user.is_authenticated:\n            return render(request, 'document.html')\n        else:\n            return redirect('auth')",
+        "detail": "ChemProject.ChemDocument.views_classes.document_view",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentWithIdView",
+        "kind": 6,
+        "importPath": "ChemProject.ChemDocument.views_classes.document_with_id_view",
+        "description": "ChemProject.ChemDocument.views_classes.document_with_id_view",
+        "peekOfCode": "class DocumentWithIdView(View):\n    def get(self, request, document_id):\n        if request.user.is_authenticated:\n            return render(request, 'document.html', {'document_id': document_id})\n        else:\n            return redirect('auth')",
+        "detail": "ChemProject.ChemDocument.views_classes.document_with_id_view",
+        "documentation": {}
+    },
+    {
+        "label": "ChemdocumentConfig",
+        "kind": 6,
+        "importPath": "ChemProject.ChemDocument.apps",
+        "description": "ChemProject.ChemDocument.apps",
+        "peekOfCode": "class ChemdocumentConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'ChemDocument'",
+        "detail": "ChemProject.ChemDocument.apps",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "ChemProject.ChemDocument.urls",
+        "description": "ChemProject.ChemDocument.urls",
+        "peekOfCode": "urlpatterns = [\n    path('document/', DocumentView.as_view(), name='document'),\n    path('document/<str:document_id>/', DocumentWithIdView.as_view(), name='document_view')\n]",
+        "detail": "ChemProject.ChemDocument.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.asgi",
+        "description": "ChemProject.ChemProject.asgi",
+        "peekOfCode": "application = ProtocolTypeRouter({\n    \"http\": get_asgi_application(),\n    \"websocket\": AuthMiddlewareStack(\n        URLRouter(\n            websocket_urlpatterns\n        )\n    ),\n})",
+        "detail": "ChemProject.ChemProject.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.getenv('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"*\"]\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "SECRET_KEY = os.getenv('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"*\"]\n# Application definition\nINSTALLED_APPS = [\n    'whitenoise.runserver_nostatic',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\"*\"]\n# Application definition\nINSTALLED_APPS = [\n    'whitenoise.runserver_nostatic',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "ALLOWED_HOSTS = [\"*\"]\n# Application definition\nINSTALLED_APPS = [\n    'whitenoise.runserver_nostatic',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'whitenoise.runserver_nostatic',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'ChemVisualizer',\n    'ChemChat',",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'whitenoise.middleware.WhiteNoiseMiddleware',\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "ROOT_URLCONF = 'ChemProject.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR, 'templates'),],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR, 'templates'),],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',\n                'django.contrib.messages.context_processors.messages',",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'ChemProject.wsgi.application'\nASGI_APPLICATION = 'ChemProject.asgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ASGI_APPLICATION",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "ASGI_APPLICATION = 'ChemProject.asgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CHANNEL_LAYERS",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "CHANNEL_LAYERS = {\n    \"default\": {\n        \"BACKEND\": \"channels_redis.core.RedisChannelLayer\",\n        \"CONFIG\": {\n            \"hosts\": [(\"127.0.0.1\", 6379)],\n        },\n    },\n}\n# Internationalization\n# https://docs.djangoproject.com/en/5.2/topics/i18n/",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'uk'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static')\n]",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static')\n]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static')\n]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static')\n]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "STATIC_URL = '/static/'\nSTATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static')\n]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nAUTH_USER_MODEL = 'core.Chemist'  # або вкажи актуальний app name\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "STATICFILES_DIRS = [\n    os.path.join(BASE_DIR, 'static')\n]\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nAUTH_USER_MODEL = 'core.Chemist'  # або вкажи актуальний app name\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\nMEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nAUTH_USER_MODEL = 'core.Chemist'  # або вкажи актуальний app name\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nAUTH_USER_MODEL = 'core.Chemist'  # або вкажи актуальний app name\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nAUTH_USER_MODEL = 'core.Chemist'  # або вкажи актуальний app name\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_USER_MODEL",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "AUTH_USER_MODEL = 'core.Chemist'  # або вкажи актуальний app name\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "ChemProject.ChemProject.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.urls",
+        "description": "ChemProject.ChemProject.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('core.urls')),\n]",
+        "detail": "ChemProject.ChemProject.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.wsgi",
+        "description": "ChemProject.ChemProject.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "ChemProject.ChemProject.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "ConvertView",
+        "kind": 6,
+        "importPath": "ChemProject.ChemVisualizer.views_classes.converter_view",
+        "description": "ChemProject.ChemVisualizer.views_classes.converter_view",
+        "peekOfCode": "class ConvertView(View):\n    def get(self, request):\n        return render(request, 'ChemVisualizer/converter.html')\n    def post(self, request):\n        sdf_file = request.FILES.get(\"sdf_file\")\n        if not sdf_file:\n            return HttpResponse(\"❌ Файл не надано.\", status=400)\n        try:\n            sdf_data = sdf_file.read().decode(\"utf-8\")\n            stl_data = convert_sdf_to_stl_bytes(sdf_data)",
+        "detail": "ChemProject.ChemVisualizer.views_classes.converter_view",
+        "documentation": {}
+    },
+    {
+        "label": "convert_sdf_to_stl_bytes",
+        "kind": 2,
+        "importPath": "ChemProject.ChemVisualizer.views_classes.converter_view",
+        "description": "ChemProject.ChemVisualizer.views_classes.converter_view",
+        "peekOfCode": "def convert_sdf_to_stl_bytes(sdf_data: str) -> bytes:\n    mol = Chem.MolFromMolBlock(sdf_data, removeHs=False)\n    if mol is None:\n        raise ValueError(\"Не вдалося зчитати файл SDF\")\n    if not mol.GetConformer().Is3D():\n        AllChem.EmbedMolecule(mol)\n        AllChem.UFFOptimizeMolecule(mol)\n    conf = mol.GetConformer()\n    all_vertices = []\n    all_triangles = []",
+        "detail": "ChemProject.ChemVisualizer.views_classes.converter_view",
+        "documentation": {}
+    },
+    {
+        "label": "MoleculeView",
+        "kind": 6,
+        "importPath": "ChemProject.ChemVisualizer.views_classes.molecule_view",
+        "description": "ChemProject.ChemVisualizer.views_classes.molecule_view",
+        "peekOfCode": "class MoleculeView(View):\n    def get(request):\n        name = request.COOKIES.get('moleculeName')\n        smiles = request.COOKIES.get('moleculeSmiles')\n        results = pcp.get_compounds(name, 'name')\n        if results:\n            compound = results[0]\n            smiles = compound.isomeric_smiles\n            molecular_formula = compound.molecular_formula\n            molecular_weight = compound.molecular_weight",
+        "detail": "ChemProject.ChemVisualizer.views_classes.molecule_view",
+        "documentation": {}
+    },
+    {
+        "label": "VisualizeFileView",
+        "kind": 6,
+        "importPath": "ChemProject.ChemVisualizer.views_classes.visualize_file_view",
+        "description": "ChemProject.ChemVisualizer.views_classes.visualize_file_view",
+        "peekOfCode": "class VisualizeFileView(View):\n    def get(self, request):\n        sdf_data = request.session.pop('sdf_data', None)\n        return render(request, 'ChemVisualizer/visualize.html', {'sdf_data': sdf_data})\n    def post(self, request):\n        sdf_file = request.FILES['sdf_file']\n        sdf_data = sdf_file.read().decode('utf-8')\n        request.session['sdf_data'] = sdf_data\n        return redirect('visualize_sdf')",
+        "detail": "ChemProject.ChemVisualizer.views_classes.visualize_file_view",
+        "documentation": {}
+    },
+    {
+        "label": "ChemvisualizerConfig",
+        "kind": 6,
+        "importPath": "ChemProject.ChemVisualizer.apps",
+        "description": "ChemProject.ChemVisualizer.apps",
+        "peekOfCode": "class ChemvisualizerConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'ChemVisualizer'",
+        "detail": "ChemProject.ChemVisualizer.apps",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "ChemProject.ChemVisualizer.urls",
+        "description": "ChemProject.ChemVisualizer.urls",
+        "peekOfCode": "urlpatterns = [\n    path('view_molecule/', MoleculeView.as_view(), name='view_molecule'),\n    path('converter/', ConvertView.as_view(), name='converter'),\n    path('visualize_file/', VisualizeFileView.as_view(), name='visualize_file'),\n]",
+        "detail": "ChemProject.ChemVisualizer.urls",
+        "documentation": {}
+    },
+    {
+        "label": "view_molecule",
+        "kind": 2,
+        "importPath": "ChemProject.ChemVisualizer.views",
+        "description": "ChemProject.ChemVisualizer.views",
+        "peekOfCode": "def view_molecule(request):\n    return render(request, 'ChemVisualizer/view_molecule.html')\ndef visualize_file(request):\n    return render(request, 'ChemVisualizer/visualize_file.html')",
+        "detail": "ChemProject.ChemVisualizer.views",
+        "documentation": {}
+    },
+    {
+        "label": "visualize_file",
+        "kind": 2,
+        "importPath": "ChemProject.ChemVisualizer.views",
+        "description": "ChemProject.ChemVisualizer.views",
+        "peekOfCode": "def visualize_file(request):\n    return render(request, 'ChemVisualizer/visualize_file.html')",
+        "detail": "ChemProject.ChemVisualizer.views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "ChemProject.core.migrations.0001_initial",
+        "description": "ChemProject.core.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Molecule',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "ChemProject.core.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Chemist",
+        "kind": 6,
+        "importPath": "ChemProject.core.models.chemist",
+        "description": "ChemProject.core.models.chemist",
+        "peekOfCode": "class Chemist(AbstractUser):\n    email = models.EmailField(unique=True)\n    phone = models.CharField(max_length=15, unique=True)\n    profile_picture = models.ImageField(upload_to='profile_pictures/', blank=True, null=True)\n    is_verified = models.BooleanField(default=False)\n    is_blocked = models.BooleanField(default=False)\n    is_online = models.BooleanField(default=False)\n    def __str__(self):\n        return self.username",
+        "detail": "ChemProject.core.models.chemist",
+        "documentation": {}
+    },
+    {
+        "label": "Contact",
+        "kind": 6,
+        "importPath": "ChemProject.core.models.contact",
+        "description": "ChemProject.core.models.contact",
+        "peekOfCode": "class Contact(models.Model):\n    user = models.ForeignKey(Chemist, on_delete=models.CASCADE, related_name='user_contacts')\n    contact = models.ForeignKey(Chemist, on_delete=models.CASCADE, related_name='contact_users')\n    created_at = models.DateTimeField(auto_now_add=True)\n    class Meta:\n        unique_together = ('user', 'contact')      \n    def __str__(self):\n        return f\"{self.user.username} - {self.contact.username}\"",
+        "detail": "ChemProject.core.models.contact",
+        "documentation": {}
+    },
+    {
+        "label": "Message",
+        "kind": 6,
+        "importPath": "ChemProject.core.models.message",
+        "description": "ChemProject.core.models.message",
+        "peekOfCode": "class Message(models.Model):\n    sender = models.ForeignKey('Chemist', on_delete=models.CASCADE, related_name='sent_messages')\n    receiver = models.ForeignKey('Chemist', on_delete=models.CASCADE, related_name='received_messages')\n    content = models.TextField()\n    timestamp = models.DateTimeField(auto_now_add=True)\n    is_read = models.BooleanField(default=False)\n    def __str__(self):\n        return f\"Message from {self.sender.username} to {self.receiver.username} at {self.timestamp}\"",
+        "detail": "ChemProject.core.models.message",
+        "documentation": {}
+    },
+    {
+        "label": "Molecule",
+        "kind": 6,
+        "importPath": "ChemProject.core.models.molecule",
+        "description": "ChemProject.core.models.molecule",
+        "peekOfCode": "class Molecule(models.Model):\n    name = models.CharField(max_length=100)\n    formula = models.CharField(max_length=50)\n    smiles = models.TextField()\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return self.name",
+        "detail": "ChemProject.core.models.molecule",
+        "documentation": {}
+    },
+    {
+        "label": "AuthView",
+        "kind": 6,
+        "importPath": "ChemProject.core.views_classes.auth_view",
+        "description": "ChemProject.core.views_classes.auth_view",
+        "peekOfCode": "class AuthView(View):\n    def get(self, request):\n        return render(request, 'auth.html')\n    def post(self, request):\n        username = request.POST.get('username')\n        password = request.POST.get('password')\n        email = request.POST.get('email')\n        first_name = request.POST.get('first_name')\n        last_name = request.POST.get('last_name')\n        phone = request.POST.get('phone')",
+        "detail": "ChemProject.core.views_classes.auth_view",
+        "documentation": {}
+    },
+    {
+        "label": "CoreConfig",
+        "kind": 6,
+        "importPath": "ChemProject.core.apps",
+        "description": "ChemProject.core.apps",
+        "peekOfCode": "class CoreConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'core'",
+        "detail": "ChemProject.core.apps",
+        "documentation": {}
+    },
+    {
+        "label": "MoleculeSerializer",
+        "kind": 6,
+        "importPath": "ChemProject.core.serializer",
+        "description": "ChemProject.core.serializer",
+        "peekOfCode": "class MoleculeSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Molecule\n        fields = \"__all__\"",
+        "detail": "ChemProject.core.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "handler404",
+        "kind": 5,
+        "importPath": "ChemProject.core.urls",
+        "description": "ChemProject.core.urls",
+        "peekOfCode": "handler404 = 'your_project.views.custom_page_not_found'\nhandler500 = 'your_project.views.custom_error_view'\nrouter = routers.DefaultRouter()\nrouter.register(r'molecule-history', MoluculeAPIView, basename='molecule-history')\nurlpatterns = [\n    path('', views.index, name='index'),\n    path('auth/', views.auth, name='auth'),\n    path('about/', views.about, name='about'),\n    path('what_are_smiles/', views.what_are_smiles, name=\"what_are_smiles\"),\n    path('logout/', views.logout, name='logout'),",
+        "detail": "ChemProject.core.urls",
+        "documentation": {}
+    },
+    {
+        "label": "handler500",
+        "kind": 5,
+        "importPath": "ChemProject.core.urls",
+        "description": "ChemProject.core.urls",
+        "peekOfCode": "handler500 = 'your_project.views.custom_error_view'\nrouter = routers.DefaultRouter()\nrouter.register(r'molecule-history', MoluculeAPIView, basename='molecule-history')\nurlpatterns = [\n    path('', views.index, name='index'),\n    path('auth/', views.auth, name='auth'),\n    path('about/', views.about, name='about'),\n    path('what_are_smiles/', views.what_are_smiles, name=\"what_are_smiles\"),\n    path('logout/', views.logout, name='logout'),\n    path('auth/', AuthView.as_view(), name='auth'),",
+        "detail": "ChemProject.core.urls",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "ChemProject.core.urls",
+        "description": "ChemProject.core.urls",
+        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(r'molecule-history', MoluculeAPIView, basename='molecule-history')\nurlpatterns = [\n    path('', views.index, name='index'),\n    path('auth/', views.auth, name='auth'),\n    path('about/', views.about, name='about'),\n    path('what_are_smiles/', views.what_are_smiles, name=\"what_are_smiles\"),\n    path('logout/', views.logout, name='logout'),\n    path('auth/', AuthView.as_view(), name='auth'),\n    # Chem Apps",
+        "detail": "ChemProject.core.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "ChemProject.core.urls",
+        "description": "ChemProject.core.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='index'),\n    path('auth/', views.auth, name='auth'),\n    path('about/', views.about, name='about'),\n    path('what_are_smiles/', views.what_are_smiles, name=\"what_are_smiles\"),\n    path('logout/', views.logout, name='logout'),\n    path('auth/', AuthView.as_view(), name='auth'),\n    # Chem Apps\n    path('visualizer/', include('ChemVisualizer.urls')),\n    path('chat/', include('ChemChat.urls')),",
+        "detail": "ChemProject.core.urls",
+        "documentation": {}
+    },
+    {
+        "label": "MoluculeAPIView",
+        "kind": 6,
+        "importPath": "ChemProject.core.views",
+        "description": "ChemProject.core.views",
+        "peekOfCode": "class MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
+        "detail": "ChemProject.core.views",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "ChemProject.core.views",
+        "description": "ChemProject.core.views",
+        "peekOfCode": "def index(request):\n    molucules = Molecule.objects.all()\n    return render(request, 'index.html', {'molecules_history': molucules})\ndef auth(request):\n    if request.user.is_authenticated:\n        return render(request, 'auth.html')\n    else:\n        return render(request, 'auth.html', {'no_auth': True})\ndef about(request):\n    return render(request, 'about.html')",
+        "detail": "ChemProject.core.views",
+        "documentation": {}
+    },
+    {
+        "label": "auth",
+        "kind": 2,
+        "importPath": "ChemProject.core.views",
+        "description": "ChemProject.core.views",
+        "peekOfCode": "def auth(request):\n    if request.user.is_authenticated:\n        return render(request, 'auth.html')\n    else:\n        return render(request, 'auth.html', {'no_auth': True})\ndef about(request):\n    return render(request, 'about.html')\ndef what_are_smiles(request):\n    return render(request, 'ChemVisualizer/what_are_smiles.html')\ndef logout(request):",
+        "detail": "ChemProject.core.views",
+        "documentation": {}
+    },
+    {
+        "label": "about",
+        "kind": 2,
+        "importPath": "ChemProject.core.views",
+        "description": "ChemProject.core.views",
+        "peekOfCode": "def about(request):\n    return render(request, 'about.html')\ndef what_are_smiles(request):\n    return render(request, 'ChemVisualizer/what_are_smiles.html')\ndef logout(request):\n    django_logout(request)\n    return redirect('index')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
+        "detail": "ChemProject.core.views",
+        "documentation": {}
+    },
+    {
+        "label": "what_are_smiles",
+        "kind": 2,
+        "importPath": "ChemProject.core.views",
+        "description": "ChemProject.core.views",
+        "peekOfCode": "def what_are_smiles(request):\n    return render(request, 'ChemVisualizer/what_are_smiles.html')\ndef logout(request):\n    django_logout(request)\n    return redirect('index')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
+        "detail": "ChemProject.core.views",
+        "documentation": {}
+    },
+    {
+        "label": "logout",
+        "kind": 2,
+        "importPath": "ChemProject.core.views",
+        "description": "ChemProject.core.views",
+        "peekOfCode": "def logout(request):\n    django_logout(request)\n    return redirect('index')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
+        "detail": "ChemProject.core.views",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "ChemProject.manage",
+        "description": "ChemProject.manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ChemProject.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "ChemProject.manage",
+        "documentation": {}
+    }
+]

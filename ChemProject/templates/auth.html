@@ -1,0 +1,56 @@
+{% extends "template.html" %}
+{% load static %}
+
+{% block title %}ChemVisualizer | Реєстрація хіміка 😊{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/desktop/auth.css' %}">
+<link rel="stylesheet" href="{% static 'css/mobile/auth.css' %}">
+<meta name="description" content="Чат із друзями!">
+<meta name="author" content="C1PL3R">
+{% endblock %}
+
+{% block body %}
+<span id="title" style="display: none;">ChemVisualizer | Реєстрація хіміка 😊</span>
+
+<form id="registerForm" action="javascript:void(0);">
+    <h1 style="color: white; font-size: 20px; text-align: center; width: 100%;">Реєстрація/вхід</h1>
+    <div id="contact-message"></div>
+    {% csrf_token %}
+    <div class="username-container" title="Вас будуть бачити під ваши нікнеймом">
+        <input type="text" class="username_input" placeholder="Нікнейм" name="username" id='username' required />
+        <label for="username" class="username_label">Нікнейм</label>
+    </div>
+
+    <div class="password-container">
+        <input type="password" class="password_input" placeholder="Пароль" name="password" id='password' maxlength="20" required />
+        <label for="password" class="password_label">Пароль</label>
+    </div>
+    
+    <div class="email-container">
+        <input type="email" class="email_input" placeholder="Email" name="email" id='email' required />
+        <label for="email" class="email_label">Email</label>
+    </div>
+
+    <div class="phone-container">
+        <input type="tel" class="phone_input" placeholder="Телефон" name="phone" id='phone_number' required />
+        <label for="phone" class="phone_label">Телефон</label>
+    </div>
+
+    <div class="first-name-container">
+        <input type="text" class="first-name_input" placeholder="Ім'я" name="first_name" id='first_name' />
+        <label for="first-name" class="first-name_label">Ім'я</label>
+    </div>
+
+    <div class="last-name-container">
+        <input type="text" class="last-name_input" placeholder="Прізвище" name="last_name" id='last_name' />
+        <label for="last-name" class="last-name_label">Прізвище</label>
+    </div>
+
+    <div class="button-container">
+        <button type="submit">Зареєструватися</button>
+    </div>
+</form>
+
+<script src="{% static 'js/auth.js' %}"></script>
+
+{% endblock %}

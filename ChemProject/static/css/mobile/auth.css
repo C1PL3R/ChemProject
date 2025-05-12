@@ -1,0 +1,7 @@
+@media (max-width: 768px) {
+    form{
+        width: calc(100% - 40px);
+        gap: 10px;
+        margin: 20px;
+    }
+}

@@ -1,0 +1,134 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1d1d2bd3;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+
+/* Контейнери */
+.username-container,
+.password-container,
+.email-container,
+.phone-container,
+.first-name-container,
+.last-name-container {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Інпути */
+.username_input,
+.password_input,
+.email_input,
+.phone_input,
+.first-name_input,
+.last-name_input {
+    font-family: 'Fira Code';
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 17px;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+/* Плейсхолдери */
+.username_input::placeholder,
+.password_input::placeholder,
+.email_input::placeholder,
+.phone_input::placeholder,
+.first-name_input::placeholder,
+.last-name_input::placeholder {
+    color: transparent;
+}
+
+/* Лейбли початково */
+.username_label,
+.password_label,
+.email_label,
+.phone_label,
+.first-name_label,
+.last-name_label {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    font-size: 20px;
+    color: #9b9b9b;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+/* Анімація лейблів при фокусі або якщо є значення */
+.username_input:focus ~ .username_label,
+.username_input:not(:placeholder-shown) ~ .username_label,
+.password_input:focus ~ .password_label,
+.password_input:not(:placeholder-shown) ~ .password_label,
+.email_input:focus ~ .email_label,
+.email_input:not(:placeholder-shown) ~ .email_label,
+.phone_input:focus ~ .phone_label,
+.phone_input:not(:placeholder-shown) ~ .phone_label,
+.first-name_input:focus ~ .first-name_label,
+.first-name_input:not(:placeholder-shown) ~ .first-name_label,
+.last-name_input:focus ~ .last-name_label,
+.last-name_input:not(:placeholder-shown) ~ .last-name_label {
+    top: 0;
+    font-size: 17px;
+    color: #9f9fd3;
+    font-weight: 700;
+}
+
+/* Стиль при фокусі інпутів */
+.username_input:focus,
+.password_input:focus,
+.email_input:focus,
+.phone_input:focus,
+.first-name_input:focus,
+.last-name_input:focus {
+    padding-bottom: 6px;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #9f9fd3, #4e4ebf);
+    border-image-slice: 1;
+}
+
+/* При required/invalid */
+.username_input:required,
+.username_input:invalid,
+.password_input:required,
+.password_input:invalid,
+.email_input:required,
+.email_input:invalid,
+.phone_input:required,
+.phone_input:invalid,
+.first-name_input:required,
+.first-name_input:invalid,
+.last-name_input:required,
+.last-name_input:invalid {
+    box-shadow: none;
+}
+
+#contact-message {
+    width: 100%;
+    display: none;
+    text-align: center;
+    justify-content: center;
+    color: red;
+}

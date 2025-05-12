@@ -1,0 +1,72 @@
+.username-container,
+.phone-container {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.username_input,
+.phone_input {
+    font-family: 'Fira Code';
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 17px;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.username_input::placeholder,
+.phone_input::placeholder {
+    color: transparent;
+}
+
+.username_input:focus~.username_label,
+.username_input:not(:placeholder-shown)~.username_label,
+.phone_input:focus~.phone_label,
+.phone_input:not(:placeholder-shown)~.phone_label {
+    top: 0;
+    font-size: 17px;
+    color: #9f9fd3;
+    font-weight: 700;
+}
+
+.username_label,
+.phone_label {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    font-size: 20px;
+    color: #9b9b9b;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.username_input:focus,
+.phone_input:focus {
+    padding-bottom: 6px;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #9f9fd3, #4e4ebf);
+    border-image-slice: 1;
+}
+
+.username_input:focus~.username_label,
+.phone_input:focus~.phone_label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #9f9fd3;
+}
+
+.username_input:required,
+.username_input:invalid,
+.phone_input:required,
+.phone_input:invalid {
+    box-shadow: none;
+}
