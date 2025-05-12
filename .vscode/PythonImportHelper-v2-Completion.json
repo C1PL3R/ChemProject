@@ -8,6 +8,14 @@
         "documentation": {}
     },
     {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
         "label": "HttpResponse",
         "importPath": "django.http",
         "description": "django.http",
@@ -112,6 +120,14 @@
         "documentation": {}
     },
     {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
         "label": "Chemist",
         "importPath": "core.models",
         "description": "core.models",
@@ -176,7 +192,7 @@
         "documentation": {}
     },
     {
-        "label": "Contact",
+        "label": "Document",
         "importPath": "core.models",
         "description": "core.models",
         "isExtraImport": true,
@@ -184,7 +200,23 @@
         "documentation": {}
     },
     {
-        "label": "Contact",
+        "label": "Document",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Document",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Document",
         "importPath": "core.models",
         "description": "core.models",
         "isExtraImport": true,
@@ -691,14 +723,6 @@
     },
     {
         "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "include",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -1252,6 +1276,15 @@
         "documentation": {}
     },
     {
+        "label": "save_doc",
+        "kind": 2,
+        "importPath": "ChemProject.ChemChat.consumers",
+        "description": "ChemProject.ChemChat.consumers",
+        "peekOfCode": "def save_doc(text, doc_id):\n    Document.objects.filter(id=doc_id).update(text=text)\nclass DocumentConsumer(AsyncWebsocketConsumer):\n    async def connect(self):\n        self.document_name = self.scope['url_route']['kwargs']['document_id']\n        self.document_group_name = f'document_{self.document_name}'\n        # Приєднуємо користувача до групи\n        await self.channel_layer.group_add(\n            self.document_group_name,\n            self.channel_name",
+        "detail": "ChemProject.ChemChat.consumers",
+        "documentation": {}
+    },
+    {
         "label": "websocket_urlpatterns",
         "kind": 5,
         "importPath": "ChemProject.ChemChat.routing",
@@ -1270,11 +1303,20 @@
         "documentation": {}
     },
     {
+        "label": "CreateNewDocView",
+        "kind": 6,
+        "importPath": "ChemProject.ChemDocument.views_classes.create_new_doc_view",
+        "description": "ChemProject.ChemDocument.views_classes.create_new_doc_view",
+        "peekOfCode": "class CreateNewDocView(View):\n    def post(self, request):\n        curent_user = request.user\n        doc = Document.objects.create(title=\"Безіменний документ\", creator=curent_user)\n        return JsonResponse({'doc_id': doc.id}, status=200)",
+        "detail": "ChemProject.ChemDocument.views_classes.create_new_doc_view",
+        "documentation": {}
+    },
+    {
         "label": "DocumentView",
         "kind": 6,
         "importPath": "ChemProject.ChemDocument.views_classes.document_view",
         "description": "ChemProject.ChemDocument.views_classes.document_view",
-        "peekOfCode": "class DocumentView(View):\n    def get(self, request):\n        if request.user.is_authenticated:\n            return render(request, 'ChemDocument/document.html', {'title': 'ChemDocument'})\n        else:\n            return redirect('auth')",
+        "peekOfCode": "class DocumentView(View):\n    def get(self, request):\n        if request.user.is_authenticated:\n            docs = Document.objects.filter(creator=request.user)\n            return render(request, 'ChemDocument/document.html', {'docs': docs, 'title': 'ChemDocument'})\n        else:\n            return redirect('auth')",
         "detail": "ChemProject.ChemDocument.views_classes.document_view",
         "documentation": {}
     },
@@ -1283,7 +1325,7 @@
         "kind": 6,
         "importPath": "ChemProject.ChemDocument.views_classes.document_with_id_view",
         "description": "ChemProject.ChemDocument.views_classes.document_with_id_view",
-        "peekOfCode": "class DocumentWithIdView(View):\n    def get(self, request, document_id):\n        if request.user.is_authenticated:\n            return render(request, 'ChemDocument/document.html', {'document_id': document_id, 'title': 'ChemDocument',})\n        else:\n            return redirect('auth')",
+        "peekOfCode": "class DocumentWithIdView(View):\n    def get(self, request, document_id):\n        if request.user.is_authenticated:\n            doc = Document.objects.filter(id=document_id).first()\n            context =  {'document_id': document_id, \n                        'title': 'ChemDocument',\n                        'document': doc}\n            return render(request, 'ChemDocument/document.html', context)\n        else:\n            return redirect('auth')",
         "detail": "ChemProject.ChemDocument.views_classes.document_with_id_view",
         "documentation": {}
     },
@@ -1301,7 +1343,7 @@
         "kind": 5,
         "importPath": "ChemProject.ChemDocument.urls",
         "description": "ChemProject.ChemDocument.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', DocumentView.as_view(), name='document'),\n    path('<str:document_id>/', DocumentWithIdView.as_view(), name='document_with_id')\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', DocumentView.as_view(), name='document'),\n    path('create-new-doc/', CreateNewDocView.as_view()),\n    path('<str:document_id>/', DocumentWithIdView.as_view(), name='document_with_id'),\n]",
         "detail": "ChemProject.ChemDocument.urls",
         "documentation": {}
     },

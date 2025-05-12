@@ -1,3 +1,12 @@
+.create_new_doc{
+    width: calc(100% - 40px);
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
 textarea{
     outline: none;
     height: 100vh;
@@ -5,4 +14,42 @@ textarea{
     resize: none;
     width: calc(100% - 40px);
     padding: 15px;
+}
+
+#createNewDocBtn{
+    background-color: #31315A;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+#createNewDocBtn:hover {
+    background-color: #3e3e73;
+}
+
+.docs{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+}
+
+.doc{
+    width: 200px;
+    height: 400px;
+    display: flex;
+    background-color: #1d1d2bc0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
 }

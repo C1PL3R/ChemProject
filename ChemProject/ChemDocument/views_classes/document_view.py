@@ -1,12 +1,13 @@
 from django.shortcuts import render, redirect
 from django.views import View
-from core.models import Contact
+from core.models import Document
 
 
 class DocumentView(View):
     def get(self, request):
         if request.user.is_authenticated:
-            return render(request, 'ChemDocument/document.html', {'title': 'ChemDocument'})
+            docs = Document.objects.filter(creator=request.user)
+            return render(request, 'ChemDocument/document.html', {'docs': docs, 'title': 'ChemDocument'})
         else:
             return redirect('auth')
 

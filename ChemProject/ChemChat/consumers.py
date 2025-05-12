@@ -1,6 +1,6 @@
 from channels.generic.websocket import AsyncWebsocketConsumer
 import json
-from core.models import Message, Chemist, Contact
+from core.models import Message, Chemist, Contact, Document
 from asgiref.sync import sync_to_async
 
 
@@ -16,6 +16,10 @@ def create_message(sender_id, receiver_id, message, contact_id):
 
     Message.objects.create(
         sender=sender_chemist, receiver=receiver_chemist, content=message, chat_id=contact.id)
+    
+
+
+
 
 
 class ChatConsumer(AsyncWebsocketConsumer):
@@ -44,8 +48,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
         self.sender_id = data['sender_id']
         self.receiver_id = data['receiver_id']
 
-        print(
-            f"Отримано повідомлення: {message}, Відправник: {self.sender_id}, Отримувач: {self.receiver_id}")
+        print(f"Отримано повідомлення: {message}, Відправник: {self.sender_id}, Отримувач: {self.receiver_id}")
 
         await create_message(sender_id=self.sender_id, receiver_id=self.receiver_id, message=message, contact_id=self.room_name)
 
@@ -71,7 +74,11 @@ class ChatConsumer(AsyncWebsocketConsumer):
             'receiver_id': receiver_id,
         }))
 
-
+@sync_to_async
+def save_doc(text, doc_id):
+    Document.objects.filter(id=doc_id).update(text=text)
+    
+    
 class DocumentConsumer(AsyncWebsocketConsumer):
     async def connect(self):
         self.document_name = self.scope['url_route']['kwargs']['document_id']
@@ -97,6 +104,7 @@ class DocumentConsumer(AsyncWebsocketConsumer):
         text = data.get('text')
 
         print(f"Отримано текст: {text}")
+        await save_doc(text=text, doc_id=int(self.document_name))
 
         # Відправляємо оновлення всім користувачам групи
         await self.channel_layer.group_send(
