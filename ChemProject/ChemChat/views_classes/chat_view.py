@@ -23,11 +23,12 @@ class ChatView(View):
                 context = {
                     'contacts': contact_list,
                     'receiver_name': receiver.username,
+                    'title': 'ChemChat',
                 }
 
                 return render(request, 'ChemChat/chat.html', context)
             else:
-                return render(request, 'ChemChat/chat.html', {'no_contacts': True})
+                return render(request, 'ChemChat/chat.html', {'no_contacts': True, 'title': 'ChemChat'})
         else:
             return redirect('auth')
 

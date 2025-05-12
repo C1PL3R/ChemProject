@@ -115,7 +115,7 @@ def convert_sdf_to_stl_bytes(sdf_data: str) -> bytes:
 
 class ConvertView(View):
     def get(self, request):
-        return render(request, 'ChemVisualizer/converter.html')
+        return render(request, 'ChemVisualizer/converter.html', {'title': 'ChemVisualizer'})
 
     def post(self, request):
         sdf_file = request.FILES.get("sdf_file")

@@ -20,7 +20,7 @@ class ChatWithIDView(View):
             sender = chat.contact
         
         try:
-            messages_list = Message.objects.filter(chat_id=int(chat_id))
+            messages_list = Message.objects.filter(chat_id=str(chat_id))
         except Exception:
             context = {
                 'contacts': contact_list,
@@ -30,6 +30,7 @@ class ChatWithIDView(View):
                 'sender_name': sender.username,
                 'receiver_name': receiver.username,
                 'receiver_phone': receiver.phone,
+                'title': 'ChemChat',
             }
 
             return render(request, 'ChemChat/chat.html', context)
@@ -43,6 +44,7 @@ class ChatWithIDView(View):
             'receiver_name': receiver.username,
             'receiver_phone': receiver.phone,
             'message_list': messages_list,
+            'title': 'ChemChat',
         }
 
         return render(request, 'ChemChat/chat.html', context)

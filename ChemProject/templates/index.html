@@ -1,7 +1,7 @@
 {% extends "template.html" %}
 {% load static %}
 
-{% block title %}ChemVisualizer | Головна сторінка{% endblock %}
+{% block title %}{{ title }} | Головна сторінка{% endblock %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/desktop/index.css' %}">
 <link rel="stylesheet" href="{% static 'css/mobile/index.css' %}">
@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block body %}
-<span id="title" style="display: none;">ChemVisualizer | Головна сторінка</span>
+<span id="title" style="display: none;">{{ title }} | Головна сторінка</span>
 
 <div id="loader_container">
     <span id="nameLoader" class="loader" style="display: none;"></span>
@@ -19,7 +19,8 @@
 <div class="content">
     <div class="search-buttons">
         <button id="nameOfSubstanceBtn">Генерація за назвою</button>
-        <button id="formulaOfSubstanceBtn">Генерація за формулою</button>
+        <button id="formulaOfSubstanceBtn" style="width: auto; padding: 15px;">Генерація за формулою</button>
+        <button id="SmilesOfSubstanceBtn" style="width: auto; padding: 15px;">Генерація за SMILES-кодом</button>
     </div>
 
     <div id="input_data_container">

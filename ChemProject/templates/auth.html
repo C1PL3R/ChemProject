@@ -1,16 +1,15 @@
 {% extends "template.html" %}
 {% load static %}
 
-{% block title %}ChemVisualizer | Реєстрація хіміка 😊{% endblock %}
+{% block title %}{{ title }} | Реєстрація хіміка 😊{% endblock %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/desktop/auth.css' %}">
 <link rel="stylesheet" href="{% static 'css/mobile/auth.css' %}">
-<meta name="description" content="Чат із друзями!">
 <meta name="author" content="C1PL3R">
 {% endblock %}
 
 {% block body %}
-<span id="title" style="display: none;">ChemVisualizer | Реєстрація хіміка 😊</span>
+<span id="title" style="display: none;">{{ title }} | Реєстрація хіміка 😊</span>
 
 <form id="registerForm" action="javascript:void(0);" method="post">
     <h1 style="color: white; font-size: 20px; text-align: center; width: 100%;">Реєстрація/вхід</h1>

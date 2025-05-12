@@ -2,7 +2,7 @@
 {% load static %}
 {% load custom_filters %}
 
-{% block title %}ChemVisualizer | {{ name }}{% endblock %}
+{% block title %}{{ title }} | {{ name }}{% endblock %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/desktop/view_molecule.css' %}">
 <link rel="stylesheet" href="{% static 'css/mobile/view_molecule.css' %}">
@@ -11,11 +11,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
 
-<meta name="description" content="Перегляд молекули в 3D — ChemVisualizer">
+<meta name="description" content="Перегляд молекули в 3D — {{ title }}">
 {% endblock %}
 
 {% block body %}
-<span id="title" style="display: none;">ChemVisualizer | {{ name }}</span>
+<span id="title" style="display: none;">{{ title }} | {{ name }}</span>
 
 <div class="divider">
     <span>{{name}}</span>

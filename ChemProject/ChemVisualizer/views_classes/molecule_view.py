@@ -48,6 +48,7 @@ class MoleculeView(View):
                 'aids': aids[0],
                 'sids': sids[0],
                 'synonyms': f"{synonyms[0]}, {synonyms[1]}, {synonyms[3]}",
+                'title': 'ChemVisualizer',
             }
         except IndexError:
             context = {
@@ -60,6 +61,7 @@ class MoleculeView(View):
                 'synonyms': f"{synonyms[0]}, {synonyms[1]}, {synonyms[3]}",
                 'aids': None,
                 'sids': None,
+                'title': 'ChemVisualizer'
             }
 
         response = render(request, 'ChemVisualizer/molecule_view.html', context)

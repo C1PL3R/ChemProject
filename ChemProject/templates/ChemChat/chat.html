@@ -1,7 +1,7 @@
 {% extends "template.html" %}
 {% load static %}
 
-{% block title %}ChemVisualizer | Чат{% endblock %}
+{% block title %}{{ title }} | Чат{% endblock %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/desktop/chat.css' %}">
 <link rel="stylesheet" href="{% static 'css/desktop/input.css' %}">
@@ -17,7 +17,7 @@
 {% endblock %}
 
 {% block body %}
-<span id="title" style="display: none;">ChemVisualizer | Чат</span>
+<span id="title" style="display: none;">{{ title }} | Чат</span>
 <span id="myId" style="display: none;">{{ sender_id }}</span>
 
 <div id="add-contact-container">
@@ -142,7 +142,7 @@
             {% for message in message_list %}
             <div
                 class="message-item {% if message.sender.id != sender_id %}message-item-sender{% else %}message-item-receiver{% endif %}">
-                <p>{{ message.message }}</p>
+                <p>{{ message.content }}</p>
             </div>
             {% endfor %}
         </div>

@@ -1,18 +1,18 @@
 {% extends "template.html" %}
 {% load static %}
 
-{% block title %}ChemVisualizer | Про проєкт{% endblock %}
+{% block title %}{{ title }} | Про проєкт{% endblock %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/desktop/about.css' %}">
 {% endblock %}
 
 {% block body %}
 <div class="text">
-    <span id="title" style="display: none;">ChemVisualizer | Про проєкт</span>
+    <span id="title" style="display: none;">{{ title }} | Про проєкт</span>
 
-    <h2 class="main_text">Опис проєкту ChemVisualizer</h2>
+    <h2 class="main_text">Опис проєкту {{ title }}</h2>
 
-    <p><strong>ChemVisualizer</strong> — це потужний веб-інструмент для хімічних досліджень, що дозволяє
+    <p><strong>{{ title }}</strong> — це потужний веб-інструмент для хімічних досліджень, що дозволяє
         <strong>генерувати
             та візуалізувати молекули в 3D форматі</strong>. Використовуючи SMILES-коди або
         назви
@@ -23,7 +23,7 @@
 
     <p>Цей проєкт орієнтований на <strong>вчених, учнів, студентів та хіміків</strong>, які займаються хімічними дослідженнями
         або
-        освітою. <strong>ChemVisualizer</strong> дозволяє не тільки візуалізувати молекули, але й взаємодіяти з ними,
+        освітою. <strong>{{ title }}</strong> дозволяє не тільки візуалізувати молекули, але й взаємодіяти з ними,
         обертати та масштабувати структури для кращого розуміння просторового розташування атомів та зв’язків.</p>
 
     <h3>Ключові можливості:</h3>
@@ -41,10 +41,9 @@
         </li>
     </ul>
 
-    <p><strong>ChemVisualizer</strong> дає змогу вивчати молекули на глибшому рівні та робить цей процес більш зручним і
+    <p><strong>{{ title }}</strong> дає змогу вивчати молекули на глибшому рівні та робить цей процес більш зручним і
         доступним.</p>
 </div>
-<button id="push">Click!</button>
 
 <script>
     var button = document.getElementById("push");
@@ -52,8 +51,8 @@
         Notification.requestPermission().then(perm => {
             if (perm === "granted") {
                 new Notification("Привіт!", {
-                    body: "Вітаємо у ChemVisualizer!",
-                    icon: "{% static 'molecules/images/LogoChemVisualizer.png' %}"
+                    body: "Вітаємо у {{ title }}!",
+                    icon: "{% static 'images/LogoChemProject.png' %}"
                 });
             } else if (perm === "denied") {
                 alert("Ви відмовилися від отримання сповіщень.");

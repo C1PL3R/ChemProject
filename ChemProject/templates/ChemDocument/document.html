@@ -1,0 +1,14 @@
+{% extends "template.html" %}
+{% load static %}
+
+{% block title %}{{ title }} | Про проєкт{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/desktop/document.css' %}">
+{% endblock %}
+
+{% block body %}
+<h1 id="DocumentId" style="display: none;">{{ document_id }}</h1>
+<textarea name="document" id="documentTextArea"></textarea>
+
+<script src="{% static 'js/document.js' %}"></script>
+{% endblock %}

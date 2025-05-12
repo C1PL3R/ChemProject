@@ -6,7 +6,7 @@ from core.models import Contact
 class DocumentView(View):
     def get(self, request):
         if request.user.is_authenticated:
-            return render(request, 'document.html')
+            return render(request, 'ChemDocument/document.html', {'title': 'ChemDocument'})
         else:
             return redirect('auth')
 

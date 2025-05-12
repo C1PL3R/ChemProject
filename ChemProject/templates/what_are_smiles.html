@@ -1,14 +1,14 @@
 {% extends "template.html" %}
 {% load static %}
 
-{% block title %}ChemVisualizer | Що таке smiles?{% endblock %}
+{% block title %}{{ title }} | Що таке smiles?{% endblock %}
 
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/desktop/what_are_smiles.css' %}">
 {% endblock %}
 
 {% block body %}
-<span id="title" style="display: none;">ChemVisualizer | Що таке smiles?</span>
+<span id="title" style="display: none;">{{ title }} | Що таке smiles?</span>
 
 <div class="text">
     <h1 class="main_text">Що таке SMILES?</h1>

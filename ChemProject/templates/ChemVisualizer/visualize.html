@@ -1,7 +1,7 @@
 {% extends "template.html" %}
 {% load static %}
 
-{% block title %}ChemVisualizer | Візуалізація sdf-молекули{% endblock %}
+{% block title %}{{ title }} | Візуалізація sdf-молекули{% endblock %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/desktop/view_molecule.css' %}">
 <link rel="stylesheet" href="{% static 'css/mobile/view_molecule.css' %}">
@@ -14,11 +14,11 @@
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/STLLoader.js"></script>
 
 
-<meta name="description" content="Візуалізуй sdf-молекулу — ChemVisualizer">
+<meta name="description" content="Візуалізуй sdf-молекулу — {{ title }}">
 {% endblock %}
 
 {% block body %}
-<span id="title" style="display: none;">ChemVisualizer | Візуалізація sdf-молекули</span>
+<span id="title" style="display: none;">{{ title }} | Візуалізація sdf-молекули</span>
 
 <div class="visualize_form">
     <h1>Виберіть молекулу у форматі SDF для перегляду в 3D"</h1>

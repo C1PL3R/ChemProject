@@ -25,6 +25,11 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
             "Content-Type": "application/json"
         }
     })
+        .then(function (response) {
+            if (response.data.redirect_url) {
+                window.location.href = response.data.redirect_url;
+            }
+        })
         .catch(function (error) {
             const msg = error.response?.data?.error || "Сталася помилка!";
             messageDiv.textContent = msg;
@@ -33,7 +38,6 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
         });
 });
 
-console.log(window.location.origin + "/auth/")
 
 function getCookie(name) {
     let cookieValue = null;
@@ -57,11 +61,11 @@ document.getElementById("phone").addEventListener("input", function () {
 });
 
 function formatUAPhone(phoneNumber) {
-	const cleaned = phoneNumber.replace(/\D/g, '');
+    const cleaned = phoneNumber.replace(/\D/g, '');
 
-	if (cleaned.length !== 10 || !/^0\d{9}$/.test(cleaned)) {
-		return phoneNumber;
-	}
+    if (cleaned.length !== 10 || !/^0\d{9}$/.test(cleaned)) {
+        return phoneNumber;
+    }
 
-	return `+38 (${cleaned.slice(0, 3)}) ${cleaned.slice(3, 6)}-${cleaned.slice(6, 8)}-${cleaned.slice(8)}`;
+    return `+38 (${cleaned.slice(0, 3)}) ${cleaned.slice(3, 6)}-${cleaned.slice(6, 8)}-${cleaned.slice(8)}`;
 }

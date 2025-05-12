@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 from dotenv import load_dotenv
 import os
+import socket
+
+host = socket.gethostbyname(socket.gethostname())
 
 load_dotenv()
 
@@ -120,7 +123,9 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [("127.0.0.1", 6379)],
+            "hosts": [
+                (host, 6379)  # Вказуємо поточний хост і порт Redis
+            ],
         },
     },
 }

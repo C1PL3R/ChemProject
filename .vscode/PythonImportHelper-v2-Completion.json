@@ -152,6 +152,30 @@
         "documentation": {}
     },
     {
+        "label": "Message",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Chemist",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Contact",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
         "label": "Contact",
         "importPath": "core.models",
         "description": "core.models",
@@ -225,6 +249,14 @@
     },
     {
         "label": "Molecule",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Document",
         "importPath": "core.models",
         "description": "core.models",
         "isExtraImport": true,
@@ -506,6 +538,14 @@
         "documentation": {}
     },
     {
+        "label": "sync_to_async",
+        "importPath": "asgiref.sync",
+        "description": "asgiref.sync",
+        "isExtraImport": true,
+        "detail": "asgiref.sync",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -531,6 +571,46 @@
     },
     {
         "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -658,6 +738,14 @@
         "documentation": {}
     },
     {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -671,6 +759,22 @@
         "description": "django.urls",
         "isExtraImport": true,
         "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "ChatConsumer",
+        "importPath": "ChemChat.consumers",
+        "description": "ChemChat.consumers",
+        "isExtraImport": true,
+        "detail": "ChemChat.consumers",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentConsumer",
+        "importPath": "ChemChat.consumers",
+        "description": "ChemChat.consumers",
+        "isExtraImport": true,
+        "detail": "ChemChat.consumers",
         "documentation": {}
     },
     {
@@ -768,6 +872,15 @@
         "description": "dotenv",
         "isExtraImport": true,
         "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "socket",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "socket",
+        "description": "socket",
+        "detail": "socket",
         "documentation": {}
     },
     {
@@ -919,6 +1032,14 @@
         "importPath": "django.utils.timezone",
         "description": "django.utils.timezone",
         "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
         "documentation": {}
     },
     {
@@ -1113,11 +1234,29 @@
         "documentation": {}
     },
     {
+        "label": "DocumentConsumer",
+        "kind": 6,
+        "importPath": "ChemProject.ChemChat.consumers",
+        "description": "ChemProject.ChemChat.consumers",
+        "peekOfCode": "class DocumentConsumer(AsyncWebsocketConsumer):\n    async def connect(self):\n        self.document_name = self.scope['url_route']['kwargs']['document_id']\n        self.document_group_name = f'document_{self.document_name}'\n        # Приєднуємо користувача до групи\n        await self.channel_layer.group_add(\n            self.document_group_name,\n            self.channel_name\n        )\n        await self.accept()",
+        "detail": "ChemProject.ChemChat.consumers",
+        "documentation": {}
+    },
+    {
+        "label": "create_message",
+        "kind": 2,
+        "importPath": "ChemProject.ChemChat.consumers",
+        "description": "ChemProject.ChemChat.consumers",
+        "peekOfCode": "def create_message(sender_id, receiver_id, message, contact_id):\n    contact = Contact.objects.get(id=str(contact_id))\n    sender_contact = Chemist.objects.filter(id=sender_id).first()\n    receiver_contact = Chemist.objects.filter(id=receiver_id).first()\n    sender_chemist = sender_contact\n    receiver_chemist = receiver_contact\n    Message.objects.create(\n        sender=sender_chemist, receiver=receiver_chemist, content=message, chat_id=contact.id)\nclass ChatConsumer(AsyncWebsocketConsumer):\n    async def connect(self):",
+        "detail": "ChemProject.ChemChat.consumers",
+        "documentation": {}
+    },
+    {
         "label": "websocket_urlpatterns",
         "kind": 5,
         "importPath": "ChemProject.ChemChat.routing",
         "description": "ChemProject.ChemChat.routing",
-        "peekOfCode": "websocket_urlpatterns = [\n    re_path(r'ws/chat/(?P<chat_id>\\w+)/$', consumers.ChatConsumer.as_asgi()),\n]",
+        "peekOfCode": "websocket_urlpatterns = [\n    re_path(r'ws/chat/(?P<chat_id>\\w+)/$', ChatConsumer.as_asgi()),\n    re_path(r'ws/document/(?P<document_id>\\w+)/$', DocumentConsumer.as_asgi())\n]",
         "detail": "ChemProject.ChemChat.routing",
         "documentation": {}
     },
@@ -1135,7 +1274,7 @@
         "kind": 6,
         "importPath": "ChemProject.ChemDocument.views_classes.document_view",
         "description": "ChemProject.ChemDocument.views_classes.document_view",
-        "peekOfCode": "class DocumentView(View):\n    def get(self, request):\n        if request.user.is_authenticated:\n            return render(request, 'document.html')\n        else:\n            return redirect('auth')",
+        "peekOfCode": "class DocumentView(View):\n    def get(self, request):\n        if request.user.is_authenticated:\n            return render(request, 'ChemDocument/document.html', {'title': 'ChemDocument'})\n        else:\n            return redirect('auth')",
         "detail": "ChemProject.ChemDocument.views_classes.document_view",
         "documentation": {}
     },
@@ -1144,7 +1283,7 @@
         "kind": 6,
         "importPath": "ChemProject.ChemDocument.views_classes.document_with_id_view",
         "description": "ChemProject.ChemDocument.views_classes.document_with_id_view",
-        "peekOfCode": "class DocumentWithIdView(View):\n    def get(self, request, document_id):\n        if request.user.is_authenticated:\n            return render(request, 'document.html', {'document_id': document_id})\n        else:\n            return redirect('auth')",
+        "peekOfCode": "class DocumentWithIdView(View):\n    def get(self, request, document_id):\n        if request.user.is_authenticated:\n            return render(request, 'ChemDocument/document.html', {'document_id': document_id, 'title': 'ChemDocument',})\n        else:\n            return redirect('auth')",
         "detail": "ChemProject.ChemDocument.views_classes.document_with_id_view",
         "documentation": {}
     },
@@ -1162,7 +1301,7 @@
         "kind": 5,
         "importPath": "ChemProject.ChemDocument.urls",
         "description": "ChemProject.ChemDocument.urls",
-        "peekOfCode": "urlpatterns = [\n    path('document/', DocumentView.as_view(), name='document'),\n    path('document/<str:document_id>/', DocumentWithIdView.as_view(), name='document_view')\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', DocumentView.as_view(), name='document'),\n    path('<str:document_id>/', DocumentWithIdView.as_view(), name='document_with_id')\n]",
         "detail": "ChemProject.ChemDocument.urls",
         "documentation": {}
     },
@@ -1173,6 +1312,15 @@
         "description": "ChemProject.ChemProject.asgi",
         "peekOfCode": "application = ProtocolTypeRouter({\n    \"http\": get_asgi_application(),\n    \"websocket\": AuthMiddlewareStack(\n        URLRouter(\n            websocket_urlpatterns\n        )\n    ),\n})",
         "detail": "ChemProject.ChemProject.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "host",
+        "kind": 5,
+        "importPath": "ChemProject.ChemProject.settings",
+        "description": "ChemProject.ChemProject.settings",
+        "peekOfCode": "host = socket.gethostbyname(socket.gethostname())\nload_dotenv()\n# Build paths inside the project like this: BASE_DIR / 'subdir'.\nBASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.getenv('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True",
+        "detail": "ChemProject.ChemProject.settings",
         "documentation": {}
     },
     {
@@ -1288,7 +1436,7 @@
         "kind": 5,
         "importPath": "ChemProject.ChemProject.settings",
         "description": "ChemProject.ChemProject.settings",
-        "peekOfCode": "CHANNEL_LAYERS = {\n    \"default\": {\n        \"BACKEND\": \"channels_redis.core.RedisChannelLayer\",\n        \"CONFIG\": {\n            \"hosts\": [(\"127.0.0.1\", 6379)],\n        },\n    },\n}\n# Internationalization\n# https://docs.djangoproject.com/en/5.2/topics/i18n/",
+        "peekOfCode": "CHANNEL_LAYERS = {\n    \"default\": {\n        \"BACKEND\": \"channels_redis.core.RedisChannelLayer\",\n        \"CONFIG\": {\n            \"hosts\": [\n                (host, 6379)  # Вказуємо поточний хост і порт Redis\n            ],\n        },\n    },\n}",
         "detail": "ChemProject.ChemProject.settings",
         "documentation": {}
     },
@@ -1414,7 +1562,7 @@
         "kind": 6,
         "importPath": "ChemProject.ChemVisualizer.views_classes.converter_view",
         "description": "ChemProject.ChemVisualizer.views_classes.converter_view",
-        "peekOfCode": "class ConvertView(View):\n    def get(self, request):\n        return render(request, 'ChemVisualizer/converter.html')\n    def post(self, request):\n        sdf_file = request.FILES.get(\"sdf_file\")\n        if not sdf_file:\n            return HttpResponse(\"❌ Файл не надано.\", status=400)\n        try:\n            sdf_data = sdf_file.read().decode(\"utf-8\")\n            stl_data = convert_sdf_to_stl_bytes(sdf_data)",
+        "peekOfCode": "class ConvertView(View):\n    def get(self, request):\n        return render(request, 'ChemVisualizer/converter.html', {'title': 'ChemVisualizer'})\n    def post(self, request):\n        sdf_file = request.FILES.get(\"sdf_file\")\n        if not sdf_file:\n            return HttpResponse(\"❌ Файл не надано.\", status=400)\n        try:\n            sdf_data = sdf_file.read().decode(\"utf-8\")\n            stl_data = convert_sdf_to_stl_bytes(sdf_data)",
         "detail": "ChemProject.ChemVisualizer.views_classes.converter_view",
         "documentation": {}
     },
@@ -1441,7 +1589,7 @@
         "kind": 6,
         "importPath": "ChemProject.ChemVisualizer.views_classes.visualize_file_view",
         "description": "ChemProject.ChemVisualizer.views_classes.visualize_file_view",
-        "peekOfCode": "class VisualizeFileView(View):\n    def get(self, request):\n        sdf_data = request.session.pop('sdf_data', None)\n        return render(request, 'ChemVisualizer/visualize.html', {'sdf_data': sdf_data})\n    def post(self, request):\n        sdf_file = request.FILES['sdf_file']\n        sdf_data = sdf_file.read().decode('utf-8')\n        request.session['sdf_data'] = sdf_data\n        return redirect('visualize_file')",
+        "peekOfCode": "class VisualizeFileView(View):\n    def get(self, request):\n        sdf_data = request.session.pop('sdf_data', None)\n        return render(request, 'ChemVisualizer/visualize.html', {'sdf_data': sdf_data, 'title': 'ChemVisualizer'})\n    def post(self, request):\n        sdf_file = request.FILES['sdf_file']\n        sdf_data = sdf_file.read().decode('utf-8')\n        request.session['sdf_data'] = sdf_data\n        return redirect('visualize_file')",
         "detail": "ChemProject.ChemVisualizer.views_classes.visualize_file_view",
         "documentation": {}
     },
@@ -1491,6 +1639,24 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "ChemProject.core.migrations.0002_message_chat_id",
+        "description": "ChemProject.core.migrations.0002_message_chat_id",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='message',\n            name='chat_id',\n            field=models.CharField(max_length=255, null=True),\n        ),",
+        "detail": "ChemProject.core.migrations.0002_message_chat_id",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "ChemProject.core.migrations.0003_document",
+        "description": "ChemProject.core.migrations.0003_document",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0002_message_chat_id'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Document',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('title', models.CharField(max_length=255)),",
+        "detail": "ChemProject.core.migrations.0003_document",
+        "documentation": {}
+    },
+    {
         "label": "Chemist",
         "kind": 6,
         "importPath": "ChemProject.core.models.chemist",
@@ -1509,11 +1675,20 @@
         "documentation": {}
     },
     {
+        "label": "Document",
+        "kind": 6,
+        "importPath": "ChemProject.core.models.document",
+        "description": "ChemProject.core.models.document",
+        "peekOfCode": "class Document(models.Model):\n    title = models.CharField(max_length=255)\n    text = models.TextField()\n    creator = models.ForeignKey('Chemist', on_delete=models.CASCADE, related_name='creator')\n    date = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return self.title",
+        "detail": "ChemProject.core.models.document",
+        "documentation": {}
+    },
+    {
         "label": "Message",
         "kind": 6,
         "importPath": "ChemProject.core.models.message",
         "description": "ChemProject.core.models.message",
-        "peekOfCode": "class Message(models.Model):\n    sender = models.ForeignKey('Chemist', on_delete=models.CASCADE, related_name='sent_messages')\n    receiver = models.ForeignKey('Chemist', on_delete=models.CASCADE, related_name='received_messages')\n    content = models.TextField()\n    timestamp = models.DateTimeField(auto_now_add=True)\n    is_read = models.BooleanField(default=False)\n    def __str__(self):\n        return f\"Message from {self.sender.username} to {self.receiver.username} at {self.timestamp}\"",
+        "peekOfCode": "class Message(models.Model):\n    sender = models.ForeignKey('Chemist', on_delete=models.CASCADE, related_name='sent_messages')\n    receiver = models.ForeignKey('Chemist', on_delete=models.CASCADE, related_name='received_messages')\n    content = models.TextField()\n    chat_id = models.CharField(max_length=255, null=True)\n    timestamp = models.DateTimeField(auto_now_add=True)\n    is_read = models.BooleanField(default=False)\n    def __str__(self):\n        short_content = self.content[:15].rsplit(\" \", 1)[0]\n        return f\"Sender: {self.sender.username} Receiver: {self.receiver.username} Content: {short_content}\"",
         "detail": "ChemProject.core.models.message",
         "documentation": {}
     },
@@ -1657,7 +1832,7 @@
         "kind": 2,
         "importPath": "ChemProject.core.views",
         "description": "ChemProject.core.views",
-        "peekOfCode": "def index(request):\n    molucules = Molecule.objects.all()\n    return render(request, 'index.html', {'molecules_history': molucules})\ndef auth(request):\n    if request.user.is_authenticated:\n        return render(request, 'auth.html')\n    else:\n        return render(request, 'auth.html', {'no_auth': True})\ndef about(request):\n    return render(request, 'about.html')",
+        "peekOfCode": "def index(request):\n    molucules = Molecule.objects.all()\n    return render(request, 'index.html', {'molecules_history': molucules, 'title': 'ChemProject'})\ndef auth(request):\n    if request.user.is_authenticated:\n        return render(request, 'auth.html', {'title': 'ChemProject'})\n    else:\n        return render(request, 'auth.html', {'no_auth': True, 'title': 'ChemProject'})\ndef about(request):\n    return render(request, 'about.html', {'title': 'ChemProject'})",
         "detail": "ChemProject.core.views",
         "documentation": {}
     },
@@ -1666,7 +1841,7 @@
         "kind": 2,
         "importPath": "ChemProject.core.views",
         "description": "ChemProject.core.views",
-        "peekOfCode": "def auth(request):\n    if request.user.is_authenticated:\n        return render(request, 'auth.html')\n    else:\n        return render(request, 'auth.html', {'no_auth': True})\ndef about(request):\n    return render(request, 'about.html')\ndef what_are_smiles(request):\n    return render(request, 'ChemVisualizer/what_are_smiles.html')\ndef logout(request):",
+        "peekOfCode": "def auth(request):\n    if request.user.is_authenticated:\n        return render(request, 'auth.html', {'title': 'ChemProject'})\n    else:\n        return render(request, 'auth.html', {'no_auth': True, 'title': 'ChemProject'})\ndef about(request):\n    return render(request, 'about.html', {'title': 'ChemProject'})\ndef what_are_smiles(request):\n    return render(request, 'what_are_smiles.html', {'title': 'ChemProject'})\ndef logout(request):",
         "detail": "ChemProject.core.views",
         "documentation": {}
     },
@@ -1675,7 +1850,7 @@
         "kind": 2,
         "importPath": "ChemProject.core.views",
         "description": "ChemProject.core.views",
-        "peekOfCode": "def about(request):\n    return render(request, 'about.html')\ndef what_are_smiles(request):\n    return render(request, 'ChemVisualizer/what_are_smiles.html')\ndef logout(request):\n    django_logout(request)\n    return redirect('index')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
+        "peekOfCode": "def about(request):\n    return render(request, 'about.html', {'title': 'ChemProject'})\ndef what_are_smiles(request):\n    return render(request, 'what_are_smiles.html', {'title': 'ChemProject'})\ndef logout(request):\n    django_logout(request)\n    return redirect('auth')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
         "detail": "ChemProject.core.views",
         "documentation": {}
     },
@@ -1684,7 +1859,7 @@
         "kind": 2,
         "importPath": "ChemProject.core.views",
         "description": "ChemProject.core.views",
-        "peekOfCode": "def what_are_smiles(request):\n    return render(request, 'ChemVisualizer/what_are_smiles.html')\ndef logout(request):\n    django_logout(request)\n    return redirect('index')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
+        "peekOfCode": "def what_are_smiles(request):\n    return render(request, 'what_are_smiles.html', {'title': 'ChemProject'})\ndef logout(request):\n    django_logout(request)\n    return redirect('auth')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
         "detail": "ChemProject.core.views",
         "documentation": {}
     },
@@ -1693,7 +1868,7 @@
         "kind": 2,
         "importPath": "ChemProject.core.views",
         "description": "ChemProject.core.views",
-        "peekOfCode": "def logout(request):\n    django_logout(request)\n    return redirect('index')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
+        "peekOfCode": "def logout(request):\n    django_logout(request)\n    return redirect('auth')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
         "detail": "ChemProject.core.views",
         "documentation": {}
     },

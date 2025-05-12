@@ -1,6 +1,7 @@
 from core.models import Chemist
 from django.views import View
 from django.shortcuts import render, redirect
+from django.urls import reverse
 from django.contrib.auth import login
 from django.contrib.auth.hashers import check_password
 from django.http import JsonResponse
@@ -26,9 +27,7 @@ class AuthPostView(View):
         last_name = data.get('last_name')
         phone_number = data.get('phone')
         phone = remove_formatting(phone_number)
-        
-        print(username, password, email, first_name, last_name, phone_number, phone)
-        
+                
         if not username or not password:
             return JsonResponse({'message': 'Username або пароль не можуть бути порожніми!'}, status=400)
 
@@ -36,14 +35,15 @@ class AuthPostView(View):
             user = Chemist.objects.get(username=username)
             if check_password(password, user.password):
                 login(request, user)
-                return redirect('chat')
+                print("Паролі збігаються!")
+                return JsonResponse({'redirect_url': reverse('chat')})
             else:
                 return JsonResponse({'message': 'Пароль не збігається!'}, status=400)
         except Chemist.DoesNotExist:
             if Chemist.objects.filter(username=username, phone=phone).exists():
                 user = Chemist.objects.get(username=username, phone=phone)
                 login(request, user)
-                return redirect('chat')
+                redirect('chat')
 
             user, created = Chemist.objects.get_or_create(
                 username=username,
@@ -58,4 +58,4 @@ class AuthPostView(View):
                 user.save()
 
             login(request, user)
-            return redirect('chat')
+            return JsonResponse({'redirect_url': reverse('chat')})

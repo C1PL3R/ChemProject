@@ -1,15 +1,15 @@
 {% extends "template.html" %}
 {% load static %}
 
-{% block title %}ChemVisualizer | Конвертер{% endblock %}
+{% block title %}{{ title }} | Конвертер{% endblock %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/desktop/conveter.css' %}">
 <link rel="stylesheet" href="{% static 'css/mobile/conveter.css' %}">
-<meta name="description" content="Конвертація з sdf в stl (для 3D-друку) — ChemVisualizer">
+<meta name="description" content="Конвертація з sdf в stl (для 3D-друку) — {{ title }}">
 {% endblock %}
 
 {% block body %}
-<span id="title" style="display: none;">ChemVisualizer | Конвертер</span>
+<span id="title" style="display: none;">{{ title }} | Конвертер</span>
 
 <div class="convert-form">
     <div class="converter-text">

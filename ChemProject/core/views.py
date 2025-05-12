@@ -9,28 +9,28 @@ from django.shortcuts import redirect
 
 def index(request):
     molucules = Molecule.objects.all()
-    return render(request, 'index.html', {'molecules_history': molucules})
+    return render(request, 'index.html', {'molecules_history': molucules, 'title': 'ChemProject'})
 
 
 def auth(request):
     if request.user.is_authenticated:
-        return render(request, 'auth.html')
+        return render(request, 'auth.html', {'title': 'ChemProject'})
     else:
-        return render(request, 'auth.html', {'no_auth': True})
+        return render(request, 'auth.html', {'no_auth': True, 'title': 'ChemProject'})
     
     
 def about(request):
-    return render(request, 'about.html')
+    return render(request, 'about.html', {'title': 'ChemProject'})
 
 
 def what_are_smiles(request):
-    return render(request, 'ChemVisualizer/what_are_smiles.html')
+    return render(request, 'what_are_smiles.html', {'title': 'ChemProject'})
 
 
 
 def logout(request):
     django_logout(request)
-    return redirect('index')
+    return redirect('auth')
     
 
 class MoluculeAPIView(viewsets.ReadOnlyModelViewSet):
