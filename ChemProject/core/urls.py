@@ -18,6 +18,7 @@ router.register(r'molecule-history', MoluculeAPIView, basename='molecule-history
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('google45b8458dd0908687.html', views.copyright_for_google),
     path('auth/', views.auth, name='auth'),
     path('about/', views.about, name='about'),
     path('what_are_smiles/', views.what_are_smiles, name="what_are_smiles"),

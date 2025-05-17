@@ -7,14 +7,14 @@
 }
 
 .username_input,
-.phone_input {
+.phone_input{
     font-family: 'Fira Code';
     width: 100%;
     border: 0;
-    border-bottom: 2px solid #9b9b9b;
+    border-bottom: 2px solid var(--disable-input-color);
     outline: 0;
     font-size: 17px;
-    color: #fff;
+    color: var(--color-text);
     padding: 7px 0;
     background: transparent;
     transition: border-color 0.2s;
@@ -31,7 +31,7 @@
 .phone_input:not(:placeholder-shown)~.phone_label {
     top: 0;
     font-size: 17px;
-    color: #9f9fd3;
+    color: var(--paragraph-text-color);
     font-weight: 700;
 }
 
@@ -41,7 +41,7 @@
     left: 0;
     top: 20px;
     font-size: 20px;
-    color: #9b9b9b;
+    color: var(--disable-input-color);
     pointer-events: none;
     transition: all 0.2s ease;
 }
@@ -50,7 +50,7 @@
 .phone_input:focus {
     padding-bottom: 6px;
     border-width: 3px;
-    border-image: linear-gradient(to right, #9f9fd3, #4e4ebf);
+    border-image: linear-gradient(to right, var(--paragraph-text-color), var(--bg-page-color));
     border-image-slice: 1;
 }
 
@@ -61,7 +61,7 @@
     display: block;
     transition: 0.2s;
     font-size: 17px;
-    color: #9f9fd3;
+    color: var(--paragraph-text-color);
 }
 
 .username_input:required,

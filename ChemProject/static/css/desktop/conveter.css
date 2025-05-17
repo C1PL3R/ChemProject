@@ -11,7 +11,7 @@
 .convert-form input[type="file"] {
     border: none;
     border-radius: 5px;
-    color: white;
+    color: var(--color-text);
     cursor: pointer;
     font-size: 16px;
 }
@@ -28,12 +28,12 @@
 }
 
 .converter-text h1 {
-    color: #ffffff;
+    color: var(--color-text);
     font-size: 30px;
 }
 
 .converter-text p{
-    color: #ffffff;
+    color: var(--color-text);
     font-size: 20px;
     margin-top: 10px;
     margin-bottom: 5%;

@@ -13,7 +13,7 @@ form {
     height: auto;
     margin: 0 auto;
     padding: 20px;
-    background-color: #1d1d2bd3;
+    background-color: var(--bg-menu-color-translucent);
     border-radius: 10px;
     gap: 10px;
 }
@@ -42,7 +42,7 @@ form {
     font-family: 'Fira Code';
     width: 100%;
     border: 0;
-    border-bottom: 2px solid #9b9b9b;
+    border-bottom: 2px solid var(--disable-input-color);
     outline: 0;
     font-size: 17px;
     color: #fff;
@@ -92,7 +92,7 @@ form {
 .last-name_input:not(:placeholder-shown) ~ .last-name_label {
     top: 0;
     font-size: 17px;
-    color: #9f9fd3;
+    color: var(--paragraph-text-color);
     font-weight: 700;
 }
 
@@ -105,7 +105,7 @@ form {
 .last-name_input:focus {
     padding-bottom: 6px;
     border-width: 3px;
-    border-image: linear-gradient(to right, #9f9fd3, #4e4ebf);
+    border-image: linear-gradient(to right, var(), var(--bg-page-color));
     border-image-slice: 1;
 }
 

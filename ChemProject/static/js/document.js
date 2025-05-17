@@ -25,7 +25,30 @@ if (createNewDocBtn) {
             }
         })
             .then(function (response) {
-                var callback = response.data.doc_id;
+                Swal.fire({
+                    title: 'Документ створено',
+                    text: "Зайдіть на сторінку, де є список ваших документів, і ви там його побачите! Або почекайте ще трішки часу сторінка сама перезавантажиться!",
+                    icon: 'success',
+                    confirmButtonText: 'ОК'
+                }).then(() => {
+                    var doc = response.data.doc;
+
+                    var document_ui = document.createElement("div");
+                    document_ui.classList.add("doc");
+
+                    var title = document.createElement("a");
+                    title.innerText = doc.title;
+                    title.href = window.location.origin + "/document/" + doc.id;
+                    document_ui.appendChild(title);
+
+                    var docs = document.getElementsByClassName("docs");
+                    docs[docs.length - 1].appendChild(document_ui);
+                    
+                    setTimeout(() => {
+                        window.location.href = window.location.origin + "/document/" + doc.id;
+                    }, 2000);
+                });
+
             })
             .catch(function (error) {
                 const callback = error.response?.data?.error || "Сталася помилка!";
@@ -33,26 +56,60 @@ if (createNewDocBtn) {
     });
 }
 
-var documentInput = document.getElementById('documentTextArea');
+document.addEventListener('DOMContentLoaded', function () {
+    var documentInput = document.getElementById('docEditor');
+    var documentNameInput = document.getElementById('documentNameInput');
+    var documentId = document.getElementById('DocumentId');
 
-var documentId = document.getElementById('DocumentId');
+    if (documentId && documentId.innerText) { // Check if documentId exists and has a value
+        const protocol = window.location.protocol === 'https:' ? 'wss://' : 'ws://';
+        const chatSocket = new WebSocket(
+            protocol + window.location.host + '/ws/document/' + documentId.innerText + '/'
+        );
 
-if (documentId) {
-    const chatSocket = new WebSocket(
-        'ws://' + window.location.host + '/ws/document/' + documentId.innerText + '/'
-    );
+        chatSocket.onmessage = function (e) {
+            const data = JSON.parse(e.data);
+            documentInput.value = data.text;
+            if (data.document_name) {
+                documentNameInput.value = data.document_name;
+            }
+        };
 
-    chatSocket.onmessage = function (e) {
-        const data = JSON.parse(e.data);
-        documentInput.value = data.text;
-    };
+        chatSocket.onerror = function (error) {
+            console.error('WebSocket Error: ', error);
+        };
 
-    documentInput.addEventListener('input', () => {
-        var text = documentInput.value;
-        chatSocket.send(JSON.stringify({
-            'text': text,
-        }));
-    });
-}
+        let timeoutId;
+        const delay = 5 * 1000;
+
+        documentInput.addEventListener('input', () => {
+            clearTimeout(timeoutId);
+
+            timeoutId = setTimeout(() => {
+                var text = documentInput.innerHTML;
+                console.log(text)
+                chatSocket.send(JSON.stringify({
+                    'text': text,
+                }));
+            }, delay);
+        });
+
+        documentNameInput.addEventListener('input', () => {
+            clearTimeout(timeoutId);
+
+            timeoutId = setTimeout(() => {
+                var title = documentNameInput.value;
+                chatSocket.send(JSON.stringify({
+                    'title': title,
+                }));
+            }, delay);
+        });
 
 
+        window.addEventListener('beforeunload', () => {
+            chatSocket.close();
+        });
+    } else {
+        console.warn("Document ID not found or empty. Skipping WebSocket connection.");
+    }
+});

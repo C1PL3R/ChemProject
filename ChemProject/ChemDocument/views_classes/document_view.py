@@ -7,7 +7,9 @@ class DocumentView(View):
     def get(self, request):
         if request.user.is_authenticated:
             docs = Document.objects.filter(creator=request.user)
-            return render(request, 'ChemDocument/document.html', {'docs': docs, 'title': 'ChemDocument'})
+            return render(request, 'ChemDocument/document.html', {'docs': docs, 
+                                                                  'title': 'ChemDocument', 
+                                                                  'is_doc_page': True})
         else:
             return redirect('auth')
 

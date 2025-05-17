@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from core.models import Molecule
+import re
 from rest_framework import viewsets
 from rest_framework.decorators import api_view
 from .serializer import MoleculeSerializer
@@ -31,6 +32,10 @@ def what_are_smiles(request):
 def logout(request):
     django_logout(request)
     return redirect('auth')
+
+
+def copyright_for_google(request):
+    return render(request, 'google45b8458dd0908687.html')
     
 
 class MoluculeAPIView(viewsets.ReadOnlyModelViewSet):

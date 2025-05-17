@@ -224,6 +224,14 @@
         "documentation": {}
     },
     {
+        "label": "Document",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
         "label": "Molecule",
         "importPath": "core.models",
         "description": "core.models",
@@ -570,6 +578,22 @@
         "documentation": {}
     },
     {
+        "label": "AsyncWebsocketConsumer",
+        "importPath": "channels.generic.websocket",
+        "description": "channels.generic.websocket",
+        "isExtraImport": true,
+        "detail": "channels.generic.websocket",
+        "documentation": {}
+    },
+    {
+        "label": "sync_to_async",
+        "importPath": "asgiref.sync",
+        "description": "asgiref.sync",
+        "isExtraImport": true,
+        "detail": "asgiref.sync",
+        "documentation": {}
+    },
+    {
         "label": "sync_to_async",
         "importPath": "asgiref.sync",
         "description": "asgiref.sync",
@@ -795,10 +819,10 @@
     },
     {
         "label": "DocumentConsumer",
-        "importPath": "ChemChat.consumers",
-        "description": "ChemChat.consumers",
+        "importPath": "ChemDocument.consumers",
+        "description": "ChemDocument.consumers",
         "isExtraImport": true,
-        "detail": "ChemChat.consumers",
+        "detail": "ChemDocument.consumers",
         "documentation": {}
     },
     {
@@ -1204,6 +1228,15 @@
         "documentation": {}
     },
     {
+        "label": "redis",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "redis",
+        "description": "redis",
+        "detail": "redis",
+        "documentation": {}
+    },
+    {
         "label": "AddContactView",
         "kind": 6,
         "importPath": "ChemProject.ChemChat.views_classes.add_contact_view",
@@ -1258,29 +1291,11 @@
         "documentation": {}
     },
     {
-        "label": "DocumentConsumer",
-        "kind": 6,
-        "importPath": "ChemProject.ChemChat.consumers",
-        "description": "ChemProject.ChemChat.consumers",
-        "peekOfCode": "class DocumentConsumer(AsyncWebsocketConsumer):\n    async def connect(self):\n        self.document_name = self.scope['url_route']['kwargs']['document_id']\n        self.document_group_name = f'document_{self.document_name}'\n        # Приєднуємо користувача до групи\n        await self.channel_layer.group_add(\n            self.document_group_name,\n            self.channel_name\n        )\n        await self.accept()",
-        "detail": "ChemProject.ChemChat.consumers",
-        "documentation": {}
-    },
-    {
         "label": "create_message",
         "kind": 2,
         "importPath": "ChemProject.ChemChat.consumers",
         "description": "ChemProject.ChemChat.consumers",
         "peekOfCode": "def create_message(sender_id, receiver_id, message, contact_id):\n    contact = Contact.objects.get(id=str(contact_id))\n    sender_contact = Chemist.objects.filter(id=sender_id).first()\n    receiver_contact = Chemist.objects.filter(id=receiver_id).first()\n    sender_chemist = sender_contact\n    receiver_chemist = receiver_contact\n    Message.objects.create(\n        sender=sender_chemist, receiver=receiver_chemist, content=message, chat_id=contact.id)\nclass ChatConsumer(AsyncWebsocketConsumer):\n    async def connect(self):",
-        "detail": "ChemProject.ChemChat.consumers",
-        "documentation": {}
-    },
-    {
-        "label": "save_doc",
-        "kind": 2,
-        "importPath": "ChemProject.ChemChat.consumers",
-        "description": "ChemProject.ChemChat.consumers",
-        "peekOfCode": "def save_doc(text, doc_id):\n    Document.objects.filter(id=doc_id).update(text=text)\nclass DocumentConsumer(AsyncWebsocketConsumer):\n    async def connect(self):\n        self.document_name = self.scope['url_route']['kwargs']['document_id']\n        self.document_group_name = f'document_{self.document_name}'\n        # Приєднуємо користувача до групи\n        await self.channel_layer.group_add(\n            self.document_group_name,\n            self.channel_name",
         "detail": "ChemProject.ChemChat.consumers",
         "documentation": {}
     },
@@ -1307,7 +1322,7 @@
         "kind": 6,
         "importPath": "ChemProject.ChemDocument.views_classes.create_new_doc_view",
         "description": "ChemProject.ChemDocument.views_classes.create_new_doc_view",
-        "peekOfCode": "class CreateNewDocView(View):\n    def post(self, request):\n        curent_user = request.user\n        doc = Document.objects.create(title=\"Безіменний документ\", creator=curent_user)\n        return JsonResponse({'doc_id': doc.id}, status=200)",
+        "peekOfCode": "class CreateNewDocView(View):\n    def post(self, request):\n        curent_user = request.user\n        doc = Document.objects.create(title=\"Документ Без Назви\", creator=curent_user)\n        context = {\n            \"doc\": {\n                \"id\": doc.id,\n                \"title\": doc.title,\n            }\n        }",
         "detail": "ChemProject.ChemDocument.views_classes.create_new_doc_view",
         "documentation": {}
     },
@@ -1316,7 +1331,7 @@
         "kind": 6,
         "importPath": "ChemProject.ChemDocument.views_classes.document_view",
         "description": "ChemProject.ChemDocument.views_classes.document_view",
-        "peekOfCode": "class DocumentView(View):\n    def get(self, request):\n        if request.user.is_authenticated:\n            docs = Document.objects.filter(creator=request.user)\n            return render(request, 'ChemDocument/document.html', {'docs': docs, 'title': 'ChemDocument'})\n        else:\n            return redirect('auth')",
+        "peekOfCode": "class DocumentView(View):\n    def get(self, request):\n        if request.user.is_authenticated:\n            docs = Document.objects.filter(creator=request.user)\n            return render(request, 'ChemDocument/document.html', {'docs': docs, \n                                                                  'title': 'ChemDocument', \n                                                                  'is_doc_page': True})\n        else:\n            return redirect('auth')",
         "detail": "ChemProject.ChemDocument.views_classes.document_view",
         "documentation": {}
     },
@@ -1325,7 +1340,7 @@
         "kind": 6,
         "importPath": "ChemProject.ChemDocument.views_classes.document_with_id_view",
         "description": "ChemProject.ChemDocument.views_classes.document_with_id_view",
-        "peekOfCode": "class DocumentWithIdView(View):\n    def get(self, request, document_id):\n        if request.user.is_authenticated:\n            doc = Document.objects.filter(id=document_id).first()\n            context =  {'document_id': document_id, \n                        'title': 'ChemDocument',\n                        'document': doc}\n            return render(request, 'ChemDocument/document.html', context)\n        else:\n            return redirect('auth')",
+        "peekOfCode": "class DocumentWithIdView(View):\n    def get(self, request, document_id):\n        if request.user.is_authenticated:\n            doc = Document.objects.filter(id=document_id).first()\n            context =  {'document_id': document_id, \n                        'title': 'ChemDocument',\n                        'document': doc,\n                        'document_text': doc.text,\n                        }\n            return render(request, 'ChemDocument/document.html', context)",
         "detail": "ChemProject.ChemDocument.views_classes.document_with_id_view",
         "documentation": {}
     },
@@ -1336,6 +1351,33 @@
         "description": "ChemProject.ChemDocument.apps",
         "peekOfCode": "class ChemdocumentConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'ChemDocument'",
         "detail": "ChemProject.ChemDocument.apps",
+        "documentation": {}
+    },
+    {
+        "label": "DocumentConsumer",
+        "kind": 6,
+        "importPath": "ChemProject.ChemDocument.consumers",
+        "description": "ChemProject.ChemDocument.consumers",
+        "peekOfCode": "class DocumentConsumer(AsyncWebsocketConsumer):\n    async def connect(self):\n        self.document_name = self.scope['url_route']['kwargs']['document_id']\n        self.document_group_name = f'document_{self.document_name}'\n        # Приєднуємо користувача до групи\n        await self.channel_layer.group_add(\n            self.document_group_name,\n            self.channel_name\n        )\n        await self.accept()",
+        "detail": "ChemProject.ChemDocument.consumers",
+        "documentation": {}
+    },
+    {
+        "label": "save_doc",
+        "kind": 2,
+        "importPath": "ChemProject.ChemDocument.consumers",
+        "description": "ChemProject.ChemDocument.consumers",
+        "peekOfCode": "def save_doc(text, doc_id):\n    Document.objects.filter(id=doc_id).update(text=text)\n@sync_to_async\ndef save_doc_title(title, doc_id):\n    Document.objects.filter(id=doc_id).update(title=title)\nclass DocumentConsumer(AsyncWebsocketConsumer):\n    async def connect(self):\n        self.document_name = self.scope['url_route']['kwargs']['document_id']\n        self.document_group_name = f'document_{self.document_name}'\n        # Приєднуємо користувача до групи",
+        "detail": "ChemProject.ChemDocument.consumers",
+        "documentation": {}
+    },
+    {
+        "label": "save_doc_title",
+        "kind": 2,
+        "importPath": "ChemProject.ChemDocument.consumers",
+        "description": "ChemProject.ChemDocument.consumers",
+        "peekOfCode": "def save_doc_title(title, doc_id):\n    Document.objects.filter(id=doc_id).update(title=title)\nclass DocumentConsumer(AsyncWebsocketConsumer):\n    async def connect(self):\n        self.document_name = self.scope['url_route']['kwargs']['document_id']\n        self.document_group_name = f'document_{self.document_name}'\n        # Приєднуємо користувача до групи\n        await self.channel_layer.group_add(\n            self.document_group_name,\n            self.channel_name",
+        "detail": "ChemProject.ChemDocument.consumers",
         "documentation": {}
     },
     {
@@ -1478,7 +1520,7 @@
         "kind": 5,
         "importPath": "ChemProject.ChemProject.settings",
         "description": "ChemProject.ChemProject.settings",
-        "peekOfCode": "CHANNEL_LAYERS = {\n    \"default\": {\n        \"BACKEND\": \"channels_redis.core.RedisChannelLayer\",\n        \"CONFIG\": {\n            \"hosts\": [\n                (host, 6379)  # Вказуємо поточний хост і порт Redis\n            ],\n        },\n    },\n}",
+        "peekOfCode": "CHANNEL_LAYERS = {\n    \"default\": {\n        \"BACKEND\": \"channels_redis.core.RedisChannelLayer\",\n        \"CONFIG\": {\n            \"hosts\": [(\"127.0.0.1\", 6379)],\n        },\n    },\n}\n# Internationalization\n# https://docs.djangoproject.com/en/5.2/topics/i18n/",
         "detail": "ChemProject.ChemProject.settings",
         "documentation": {}
     },
@@ -1721,7 +1763,7 @@
         "kind": 6,
         "importPath": "ChemProject.core.models.document",
         "description": "ChemProject.core.models.document",
-        "peekOfCode": "class Document(models.Model):\n    title = models.CharField(max_length=255)\n    text = models.TextField()\n    creator = models.ForeignKey('Chemist', on_delete=models.CASCADE, related_name='creator')\n    date = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return self.title",
+        "peekOfCode": "class Document(models.Model):\n    title = models.CharField(max_length=80)\n    text = models.TextField()\n    creator = models.ForeignKey('Chemist', on_delete=models.CASCADE, related_name='creator')\n    date = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return self.title",
         "detail": "ChemProject.core.models.document",
         "documentation": {}
     },
@@ -1829,7 +1871,7 @@
         "kind": 5,
         "importPath": "ChemProject.core.urls",
         "description": "ChemProject.core.urls",
-        "peekOfCode": "handler404 = 'your_project.views.custom_page_not_found'\nhandler500 = 'your_project.views.custom_error_view'\nrouter = routers.DefaultRouter()\nrouter.register(r'molecule-history', MoluculeAPIView, basename='molecule-history')\nurlpatterns = [\n    path('', views.index, name='index'),\n    path('auth/', views.auth, name='auth'),\n    path('about/', views.about, name='about'),\n    path('what_are_smiles/', views.what_are_smiles, name=\"what_are_smiles\"),\n    path('logout/', views.logout, name='logout'),",
+        "peekOfCode": "handler404 = 'your_project.views.custom_page_not_found'\nhandler500 = 'your_project.views.custom_error_view'\nrouter = routers.DefaultRouter()\nrouter.register(r'molecule-history', MoluculeAPIView, basename='molecule-history')\nurlpatterns = [\n    path('', views.index, name='index'),\n    path('google45b8458dd0908687.html', views.copyright_for_google),\n    path('auth/', views.auth, name='auth'),\n    path('about/', views.about, name='about'),\n    path('what_are_smiles/', views.what_are_smiles, name=\"what_are_smiles\"),",
         "detail": "ChemProject.core.urls",
         "documentation": {}
     },
@@ -1838,7 +1880,7 @@
         "kind": 5,
         "importPath": "ChemProject.core.urls",
         "description": "ChemProject.core.urls",
-        "peekOfCode": "handler500 = 'your_project.views.custom_error_view'\nrouter = routers.DefaultRouter()\nrouter.register(r'molecule-history', MoluculeAPIView, basename='molecule-history')\nurlpatterns = [\n    path('', views.index, name='index'),\n    path('auth/', views.auth, name='auth'),\n    path('about/', views.about, name='about'),\n    path('what_are_smiles/', views.what_are_smiles, name=\"what_are_smiles\"),\n    path('logout/', views.logout, name='logout'),\n    path('auth/', AuthView.as_view(), name='auth'),",
+        "peekOfCode": "handler500 = 'your_project.views.custom_error_view'\nrouter = routers.DefaultRouter()\nrouter.register(r'molecule-history', MoluculeAPIView, basename='molecule-history')\nurlpatterns = [\n    path('', views.index, name='index'),\n    path('google45b8458dd0908687.html', views.copyright_for_google),\n    path('auth/', views.auth, name='auth'),\n    path('about/', views.about, name='about'),\n    path('what_are_smiles/', views.what_are_smiles, name=\"what_are_smiles\"),\n    path('logout/', views.logout, name='logout'),",
         "detail": "ChemProject.core.urls",
         "documentation": {}
     },
@@ -1847,7 +1889,7 @@
         "kind": 5,
         "importPath": "ChemProject.core.urls",
         "description": "ChemProject.core.urls",
-        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(r'molecule-history', MoluculeAPIView, basename='molecule-history')\nurlpatterns = [\n    path('', views.index, name='index'),\n    path('auth/', views.auth, name='auth'),\n    path('about/', views.about, name='about'),\n    path('what_are_smiles/', views.what_are_smiles, name=\"what_are_smiles\"),\n    path('logout/', views.logout, name='logout'),\n    path('auth/', AuthView.as_view(), name='auth'),\n    path('auth-post/', AuthPostView.as_view()),",
+        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(r'molecule-history', MoluculeAPIView, basename='molecule-history')\nurlpatterns = [\n    path('', views.index, name='index'),\n    path('google45b8458dd0908687.html', views.copyright_for_google),\n    path('auth/', views.auth, name='auth'),\n    path('about/', views.about, name='about'),\n    path('what_are_smiles/', views.what_are_smiles, name=\"what_are_smiles\"),\n    path('logout/', views.logout, name='logout'),\n    path('auth/', AuthView.as_view(), name='auth'),",
         "detail": "ChemProject.core.urls",
         "documentation": {}
     },
@@ -1856,7 +1898,7 @@
         "kind": 5,
         "importPath": "ChemProject.core.urls",
         "description": "ChemProject.core.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='index'),\n    path('auth/', views.auth, name='auth'),\n    path('about/', views.about, name='about'),\n    path('what_are_smiles/', views.what_are_smiles, name=\"what_are_smiles\"),\n    path('logout/', views.logout, name='logout'),\n    path('auth/', AuthView.as_view(), name='auth'),\n    path('auth-post/', AuthPostView.as_view()),\n    path('send-name/', SendNameView.as_view(), name=\"send-name\"),\n    path('send-formula/', SendFormulaView.as_view(), name='send-formula'),",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='index'),\n    path('google45b8458dd0908687.html', views.copyright_for_google),\n    path('auth/', views.auth, name='auth'),\n    path('about/', views.about, name='about'),\n    path('what_are_smiles/', views.what_are_smiles, name=\"what_are_smiles\"),\n    path('logout/', views.logout, name='logout'),\n    path('auth/', AuthView.as_view(), name='auth'),\n    path('auth-post/', AuthPostView.as_view()),\n    path('send-name/', SendNameView.as_view(), name=\"send-name\"),",
         "detail": "ChemProject.core.urls",
         "documentation": {}
     },
@@ -1892,7 +1934,7 @@
         "kind": 2,
         "importPath": "ChemProject.core.views",
         "description": "ChemProject.core.views",
-        "peekOfCode": "def about(request):\n    return render(request, 'about.html', {'title': 'ChemProject'})\ndef what_are_smiles(request):\n    return render(request, 'what_are_smiles.html', {'title': 'ChemProject'})\ndef logout(request):\n    django_logout(request)\n    return redirect('auth')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
+        "peekOfCode": "def about(request):\n    return render(request, 'about.html', {'title': 'ChemProject'})\ndef what_are_smiles(request):\n    return render(request, 'what_are_smiles.html', {'title': 'ChemProject'})\ndef logout(request):\n    django_logout(request)\n    return redirect('auth')\ndef copyright_for_google(request):\n    return render(request, 'google45b8458dd0908687.html')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):",
         "detail": "ChemProject.core.views",
         "documentation": {}
     },
@@ -1901,7 +1943,7 @@
         "kind": 2,
         "importPath": "ChemProject.core.views",
         "description": "ChemProject.core.views",
-        "peekOfCode": "def what_are_smiles(request):\n    return render(request, 'what_are_smiles.html', {'title': 'ChemProject'})\ndef logout(request):\n    django_logout(request)\n    return redirect('auth')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
+        "peekOfCode": "def what_are_smiles(request):\n    return render(request, 'what_are_smiles.html', {'title': 'ChemProject'})\ndef logout(request):\n    django_logout(request)\n    return redirect('auth')\ndef copyright_for_google(request):\n    return render(request, 'google45b8458dd0908687.html')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
         "detail": "ChemProject.core.views",
         "documentation": {}
     },
@@ -1910,7 +1952,16 @@
         "kind": 2,
         "importPath": "ChemProject.core.views",
         "description": "ChemProject.core.views",
-        "peekOfCode": "def logout(request):\n    django_logout(request)\n    return redirect('auth')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
+        "peekOfCode": "def logout(request):\n    django_logout(request)\n    return redirect('auth')\ndef copyright_for_google(request):\n    return render(request, 'google45b8458dd0908687.html')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
+        "detail": "ChemProject.core.views",
+        "documentation": {}
+    },
+    {
+        "label": "copyright_for_google",
+        "kind": 2,
+        "importPath": "ChemProject.core.views",
+        "description": "ChemProject.core.views",
+        "peekOfCode": "def copyright_for_google(request):\n    return render(request, 'google45b8458dd0908687.html')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
         "detail": "ChemProject.core.views",
         "documentation": {}
     },
@@ -1921,6 +1972,15 @@
         "description": "ChemProject.manage",
         "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ChemProject.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
         "detail": "ChemProject.manage",
+        "documentation": {}
+    },
+    {
+        "label": "r",
+        "kind": 5,
+        "importPath": "test",
+        "description": "test",
+        "peekOfCode": "r = redis.Redis(host='127.0.0.1', port=6379, db=0)\ntry:\n    result = r.bzpopmin('myzset', timeout=1)\n    print(f\"Result from BZPOPMIN: {result}\")\nexcept redis.exceptions.ResponseError as e:\n    print(f\"Error: {e}\")",
+        "detail": "test",
         "documentation": {}
     }
 ]

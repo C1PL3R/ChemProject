@@ -10,7 +10,9 @@ class DocumentWithIdView(View):
             
             context =  {'document_id': document_id, 
                         'title': 'ChemDocument',
-                        'document': doc}
+                        'document': doc,
+                        'document_text': doc.text,
+                        }
             
             return render(request, 'ChemDocument/document.html', context)
         else:

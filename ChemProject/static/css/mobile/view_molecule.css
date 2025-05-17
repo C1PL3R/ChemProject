@@ -16,7 +16,7 @@
     }
 
     .data_about_molecule h1{
-        color: #ffffff;
+        color: var(--color-text);
         width: 100%;
         text-align: center;
         font-weight: 600;

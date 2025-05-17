@@ -1,17 +1,64 @@
 {% extends "template.html" %}
 {% load static %}
 
-{% block title %}{{ title }} | Мої документи{% endblock %}
+{% block title %}
+{{ title }} |
+{% if document_id %}
+{{ document.title }}
+{% else %}
+Мої документи
+{% endif %}
+{% endblock %}
+
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/desktop/document.css' %}">
+<link rel="stylesheet" href="{% static 'css/desktop/input.css' %}">
 {% endblock %}
 
 {% block body %}
-<span id="title" style="display: none;">{{ title }} | Мої документи</span>
 <h1 id="DocumentId" style="display: none;">{{ document_id }}</h1>
+
 {% if document_id %}
-<textarea name="document" id="documentTextArea">{{ document.text }}</textarea>
+<span id="title" style="display: none;">{{ title }} | {{ document.title }}</span>
+<div class="doc_area">
+    <div class="edit_text_container">
+        <button id="boldBtn" onclick="formatText('bold')">
+            <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
+                <g id="bold_fill" fill='none'>
+                    <path
+                        d='M24 0v24H0V0zM12.593 23.258l-.011.002-.071.035-.02.004-.014-.004-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01-.017.428.005.02.01.013.104.074.015.004.012-.004.104-.074.012-.016.004-.017-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113-.013.002-.185.093-.01.01-.003.011.018.43.005.012.008.007.201.093c.012.004.023 0 .029-.008l.004-.014-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014-.034.614c0 .012.007.02.017.024l.015-.002.201-.093.01-.008.004-.011.017-.43-.003-.012-.01-.01z' />
+                    <path fill='#09244BFF'
+                        d='M13 2.5a5.5 5.5 0 0 1 4.213 9.036 5.5 5.5 0 0 1-2.992 9.96L14 21.5H6.1a1.6 1.6 0 0 1-1.593-1.454L4.5 19.9V4.1a1.6 1.6 0 0 1 1.454-1.593L6.1 2.5zm1 11H7.5v5H14a2.5 2.5 0 0 0 0-5m-1-8H7.5v5H13a2.5 2.5 0 0 0 0-5' />
+                </g>
+            </svg>
+        </button>
+        <button onclick="formatText('italic')" id="italicBtn">
+            <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
+                <g id="italic_fill" fill='none'>
+                    <path
+                        d='M24 0v24H0V0zM12.593 23.258l-.011.002-.071.035-.02.004-.014-.004-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01-.017.428.005.02.01.013.104.074.015.004.012-.004.104-.074.012-.016.004-.017-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113-.013.002-.185.093-.01.01-.003.011.018.43.005.012.008.007.201.093c.012.004.023 0 .029-.008l.004-.014-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014-.034.614c0 .012.007.02.017.024l.015-.002.201-.093.01-.008.004-.011.017-.43-.003-.012-.01-.01z' />
+                    <path fill='#09244BFF'
+                        d='M16 2.5h-6a1.5 1.5 0 0 0 0 3h1.3l-1.624 13H8a1.5 1.5 0 0 0 0 3h6a1.5 1.5 0 0 0 0-3h-1.3l1.624-13H16a1.5 1.5 0 0 0 0-3' />
+                </g>
+            </svg>
+        </button>
+        <button onclick="formatText('underline')">
+            <svg xmlns='http://www.w3.org/2000/svg' width='32px' height='32px' viewBox='0 0 24 24'>
+                <g id="underline_fill" fill='none'>
+                    <path
+                        d='M24 0v24H0V0zM12.593 23.258l-.011.002-.071.035-.02.004-.014-.004-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01-.017.428.005.02.01.013.104.074.015.004.012-.004.104-.074.012-.016.004-.017-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113-.013.002-.185.093-.01.01-.003.011.018.43.005.012.008.007.201.093c.012.004.023 0 .029-.008l.004-.014-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014-.034.614c0 .012.007.02.017.024l.015-.002.201-.093.01-.008.004-.011.017-.43-.003-.012-.01-.01z' />
+                    <path fill='#09244BFF'
+                        d='M18 18.5a1.5 1.5 0 0 1 .144 2.993L18 21.5H6a1.5 1.5 0 0 1-.144-2.993L6 18.5zm-1-16a1.5 1.5 0 0 1 1.493 1.356L18.5 4v7a6.5 6.5 0 0 1-12.996.233L5.5 11V4a1.5 1.5 0 0 1 2.993-.144L8.5 4v7a3.5 3.5 0 0 0 6.995.192L15.5 11V4A1.5 1.5 0 0 1 17 2.5' />
+                </g>
+            </svg>
+        </button>
+    </div>
+    <div id="docEditor" contenteditable="true">{{ document.text|safe }}</div>
+
+</div>
+
 {% else %}
+<span id="title" style="display: none;">{{ title }} | Мої документи</span>
 <div class="create_new_doc">
     <div class="docs">
         {% if not docs %}
@@ -19,25 +66,22 @@
         {% else %}
         {% for doc in docs %}
         <div class="doc">
+            {% if doc.text != '' %}
+            <pre class="doc_preview" contenteditable="false">{{ doc.text|safe }}</pre>
+            {% endif %}
             <a href="{{ doc.id }}">{{ doc.title }}</a>
         </div>
         {% endfor %}
         {% endif %}
     </div>
-
-    <button id="createNewDocBtn">
-        <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
-            <title>Створити новий документ</title>
-            <g id="file_new_fill" fill='none' fill-rule='evenodd'>
-                <path
-                    d='M24 0v24H0V0zM12.593 23.258l-.011.002-.071.035-.02.004-.014-.004-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01-.017.428.005.02.01.013.104.074.015.004.012-.004.104-.074.012-.016.004-.017-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113-.013.002-.185.093-.01.01-.003.011.018.43.005.012.008.007.201.093c.012.004.023 0 .029-.008l.004-.014-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014-.034.614c0 .012.007.02.017.024l.015-.002.201-.093.01-.008.004-.011.017-.43-.003-.012-.01-.01z' />
-                <path fill='#FFFFFFFF'
-                    d='M12 2v6.5a1.5 1.5 0 0 0 1.356 1.493L13.5 10H20v10a2 2 0 0 1-1.85 1.995L18 22H6a2 2 0 0 1-1.995-1.85L4 20V4a2 2 0 0 1 1.85-1.995L6 2zm0 9.5a1 1 0 0 0-.993.883L11 12.5V14H9.5a1 1 0 0 0-.117 1.993L9.5 16H11v1.5a1 1 0 0 0 1.993.117L13 17.5V16h1.5a1 1 0 0 0 .117-1.993L14.5 14H13v-1.5a1 1 0 0 0-1-1m2-9.457a2 2 0 0 1 .877.43l.123.113L19.414 7a2 2 0 0 1 .502.84l.04.16H14z' />
-            </g>
-        </svg>
-    </button>
 </div>
 {% endif %}
 
 <script src="{% static 'js/document.js' %}"></script>
+<script>
+    function formatText(command) {
+        document.execCommand(command, false, null);
+    }
+</script>
+
 {% endblock %}

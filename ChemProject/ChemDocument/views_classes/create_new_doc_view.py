@@ -7,6 +7,13 @@ class CreateNewDocView(View):
     def post(self, request):
         curent_user = request.user
         
-        doc = Document.objects.create(title="Безіменний документ", creator=curent_user)
+        doc = Document.objects.create(title="Документ Без Назви", creator=curent_user)
         
-        return JsonResponse({'doc_id': doc.id}, status=200)
+        context = {
+            "doc": {
+                "id": doc.id,
+                "title": doc.title,
+            }
+        }
+        
+        return JsonResponse(context, status=200)

@@ -45,7 +45,7 @@
         width: 100%;
         max-width: 768px;
         padding: 10px;
-        background-color: #31315A;
+        background-color: var(--bg-button);
         display: flex;
         justify-content: space-between;
         cursor: pointer;
@@ -54,7 +54,7 @@
     }
 
     .nameOfMol {
-        color: #ffffff;
+        color: var(--color-text);
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;

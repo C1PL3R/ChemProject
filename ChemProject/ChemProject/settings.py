@@ -123,9 +123,7 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [
-                (host, 6379)  # Вказуємо поточний хост і порт Redis
-            ],
+            "hosts": [("127.0.0.1", 6379)],
         },
     },
 }

@@ -1,7 +1,7 @@
 from core.models import Chemist
 from django.views import View
 from django.shortcuts import render, redirect
-from django.urls import reverse
+from django.urls import reverse  
 from django.contrib.auth import login
 from django.contrib.auth.hashers import check_password
 from django.http import JsonResponse

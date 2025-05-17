@@ -44,7 +44,7 @@
 
 .data_about_molecule span{
     font-size: 20px;
-    color: #ffffff;
+    color: var(--color-text);
 }
 
 .data_about_molecule a{
@@ -68,7 +68,7 @@
 }
 
 .controls span{
-    color: #ffffff;
+    color: var(--color-text);
     text-align: center;
     transition: 0.5s;
 }

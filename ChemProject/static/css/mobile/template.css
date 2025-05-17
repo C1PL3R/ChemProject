@@ -9,7 +9,7 @@
 
     .menu-mobile {
         width: 100%;
-        background-color: #1D1D2B;
+        background-color: var(--bg-menu-color);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -45,7 +45,7 @@
     }
 
     #menu.overlay a {
-        color: white;
+        color: var(--color-text);
         font-size: 23px;
         margin-left: 10px;
         align-items: center;
@@ -63,7 +63,7 @@
     #burger-menu span,
     #burger-menu span:before,
     #burger-menu span:after {
-        background: white;
+        background: var(--color-text);
         display: block;
         height: 2px;
         opacity: 1;
@@ -115,8 +115,8 @@
     }
 
     #menu button {
-        background-color: #31315A;
-        color: #FFFFFF;
+        background-color: var(--bg-button);
+        color: var(--color-text);
         border: none;
         cursor: pointer;
         width: 40px;
@@ -127,7 +127,7 @@
     }
 
     #menu button:hover{
-        background-color: #3e3e73;
+        background-color: var(--bg-button-color-hover);
     }
 
     #menu button svg{
