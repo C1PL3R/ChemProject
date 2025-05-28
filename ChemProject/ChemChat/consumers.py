@@ -18,10 +18,6 @@ def create_message(sender_id, receiver_id, message, contact_id):
         sender=sender_chemist, receiver=receiver_chemist, content=message, chat_id=contact.id)
     
 
-
-
-
-
 class ChatConsumer(AsyncWebsocketConsumer):
     async def connect(self):
         self.room_name = self.scope['url_route']['kwargs']['chat_id']

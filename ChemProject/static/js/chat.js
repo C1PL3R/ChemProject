@@ -25,7 +25,7 @@ if (chatId) {
     };
 
     function SendMessage(receiver, sender) {
-        document.getElementById('chat-message-submit').onclick = function (e) {
+        document.getElementById('sendMessageBtn').onclick = function (e) {
             const input = document.getElementById('messageText');
             var message = input.value.trim();
 
@@ -90,7 +90,7 @@ if (messageText) {
     messageText.addEventListener('keydown', (event) => {
         if (event.key === 'Enter' && !event.shiftKey) {
             event.preventDefault();
-            document.getElementById("chat-message-submit").click();
+            document.getElementById("sendMessageBtn").click();
         }
     });
 
@@ -144,21 +144,6 @@ document.getElementById("addContactForm").addEventListener("submit", function (e
         });
 });
 
-function getCookie(name) {
-    let cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
-        const cookies = document.cookie.split(';');
-        for (let i = 0; i < cookies.length; i++) {
-            const cookie = cookies[i].trim();
-            if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                break;
-            }
-        }
-    }
-    return cookieValue;
-}
-
 
 document.getElementById("settingsChatBtn").addEventListener("click", function () {
     const settingsWrapper = document.getElementById("settings-wrapper");
@@ -172,23 +157,6 @@ document.getElementById("settingsChatBtn").addEventListener("click", function ()
         settingsContainer.style.display = "none";  // Ховаємо контейнер
     }
 });
-
-document.getElementById("phone_number").addEventListener("input", function () {
-    const phoneInput = document.getElementById("phone_number");
-    const formattedNumber = formatUAPhone(phoneInput.value);
-    phoneInput.value = formattedNumber;
-});
-
-function formatUAPhone(phoneNumber) {
-    const cleaned = phoneNumber.replace(/\D/g, '');
-
-    if (cleaned.length !== 10 || !/^0\d{9}$/.test(cleaned)) {
-        return phoneNumber;
-    }
-
-    return `+38 (${cleaned.slice(0, 3)}) ${cleaned.slice(3, 6)}-${cleaned.slice(6, 8)}-${cleaned.slice(8)}`;
-}
-
 
 
 function CleanHistory(chat_id) {
@@ -225,4 +193,21 @@ function DeleteChat(chat_id) {
         .catch(function (error) {
             console.error("Error deleting chat history:", error);
         });
+}
+
+
+document.getElementById("phone_number").addEventListener("input", function () {
+    const phoneInput = document.getElementById("phone_number");
+    const formattedNumber = formatUAPhone(phoneInput.value);
+    phoneInput.value = formattedNumber;
+});
+
+function formatUAPhone(phoneNumber) {
+    const cleaned = phoneNumber.replace(/\D/g, '');
+
+    if (cleaned.length !== 10 || !/^0\d{9}$/.test(cleaned)) {
+        return phoneNumber;
+    }
+
+    return `+38 (${cleaned.slice(0, 3)}) ${cleaned.slice(3, 6)}-${cleaned.slice(6, 8)}-${cleaned.slice(8)}`;
 }

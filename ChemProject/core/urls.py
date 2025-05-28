@@ -1,4 +1,3 @@
-from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
@@ -20,6 +19,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('google45b8458dd0908687.html', views.copyright_for_google),
     path('auth/', views.auth, name='auth'),
+    path('my-ip/', views.my_ip_view),
     path('about/', views.about, name='about'),
     path('what_are_smiles/', views.what_are_smiles, name="what_are_smiles"),
     path('logout/', views.logout, name='logout'),

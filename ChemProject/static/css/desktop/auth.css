@@ -42,7 +42,7 @@ form {
     font-family: 'Fira Code';
     width: 100%;
     border: 0;
-    border-bottom: 2px solid var(--disable-input-color);
+    border-bottom: 2px solid var(--disable-input-text-color);
     outline: 0;
     font-size: 17px;
     color: #fff;

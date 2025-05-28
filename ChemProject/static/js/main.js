@@ -1,18 +1,3 @@
-function getCookie(name) {
-	let cookieValue = null;
-	if (document.cookie && document.cookie !== '') {
-		const cookies = document.cookie.split(';');
-		for (let i = 0; i < cookies.length; i++) {
-			const cookie = cookies[i].trim();
-			if (cookie.substring(0, name.length + 1) === (name + '=')) {
-				cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-				break;
-			}
-		}
-	}
-	return cookieValue;
-}
-
 function setMoleculeCookies(name, smiles) {
 	const expiry = new Date();
 	expiry.setTime(expiry.getTime() + (7 * 24 * 60 * 60 * 1000));
@@ -44,36 +29,36 @@ document.getElementById("sendNameBtn").addEventListener("click", function () {
 			"Content-Type": "application/json"
 		}
 	})
-	.then(res => {
-		const data = res.data;
-		if (data.status === "success") {
-			setMoleculeCookies(data.name, data.smiles);
-			document.getElementById("sendNameBtn").style.display = "none";
+		.then(res => {
+			const data = res.data;
+			if (data.status === "success") {
+				setMoleculeCookies(data.name, data.smiles);
+				document.getElementById("sendNameBtn").style.display = "none";
 
-			const link = document.getElementById("moleculeLinkName");
-			link.href = "/visualizer/";
-			link.style.display = "inline";
-		} else {
+				const link = document.getElementById("moleculeLinkName");
+				link.href = "/visualizer/";
+				link.style.display = "inline";
+			} else {
+				Swal.fire({
+					title: 'Помилка!',
+					text: data.error || 'Щось пішло не так',
+					icon: 'error',
+					confirmButtonText: 'ОК'
+				});
+			}
+		})
+		.catch(error => {
 			Swal.fire({
 				title: 'Помилка!',
-				text: data.error || 'Щось пішло не так',
+				text: error.response?.data?.error || 'Сталася невідома помилка',
 				icon: 'error',
 				confirmButtonText: 'ОК'
 			});
-		}
-	})
-	.catch(error => {
-		Swal.fire({
-			title: 'Помилка!',
-			text: error.response?.data?.error || 'Сталася невідома помилка',
-			icon: 'error',
-			confirmButtonText: 'ОК'
+		})
+		.finally(() => {
+			loader.style.display = "none";
+			loader_container.style.display = "none";
 		});
-	})
-	.finally(() => {
-		loader.style.display = "none";
-		loader_container.style.display = "none";
-	});
 });
 
 
@@ -94,36 +79,36 @@ document.getElementById("sendFormulaBtn").addEventListener("click", function () 
 			"Content-Type": "application/json"
 		}
 	})
-	.then(res => {
-		const data = res.data;
-		if (data.status === "success") {
-			setMoleculeCookies(data.name, data.smiles);
-			document.getElementById("sendFormulaBtn").style.display = "none";
+		.then(res => {
+			const data = res.data;
+			if (data.status === "success") {
+				setMoleculeCookies(data.name, data.smiles);
+				document.getElementById("sendFormulaBtn").style.display = "none";
 
-			const link = document.getElementById("moleculeLinkFormula");
-			link.href = "/visualizer/";
-			link.style.display = "inline";
-		} else {
+				const link = document.getElementById("moleculeLinkFormula");
+				link.href = "/visualizer/";
+				link.style.display = "inline";
+			} else {
+				Swal.fire({
+					title: 'Помилка!',
+					text: data.error || 'Щось пішло не так',
+					icon: 'error',
+					confirmButtonText: 'ОК'
+				});
+			}
+		})
+		.catch(error => {
 			Swal.fire({
 				title: 'Помилка!',
-				text: data.error || 'Щось пішло не так',
+				text: error.response?.data?.error || 'Сталася невідома помилка',
 				icon: 'error',
 				confirmButtonText: 'ОК'
 			});
-		}
-	})
-	.catch(error => {
-		Swal.fire({
-			title: 'Помилка!',
-			text: error.response?.data?.error || 'Сталася невідома помилка',
-			icon: 'error',
-			confirmButtonText: 'ОК'
+		})
+		.finally(() => {
+			loader.style.display = "none";
+			loader_container.style.display = "none";
 		});
-	})
-	.finally(() => {
-		loader.style.display = "none";
-		loader_container.style.display = "none";
-	});
 });
 
 
@@ -219,3 +204,27 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	}
 });
+
+const menu = document.getElementById('customMenu');
+
+document.addEventListener('click', function (e) {
+	// 0 — ліва кнопка, 2 — права
+	if (e.button === 0) {
+		menu.style.display = 'block';
+		menu.style.left = e.pageX + 'px';
+		menu.style.top = e.pageY + 'px';
+	}
+});
+
+document.addEventListener('contextmenu', function (e) {
+	e.preventDefault();
+});
+
+document.addEventListener('click', function (e) {
+	if (!menu.contains(e.target)) {
+		menu.style.display = 'none';
+	}
+}, true);
+
+
+

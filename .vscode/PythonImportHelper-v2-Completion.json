@@ -16,6 +16,38 @@
         "documentation": {}
     },
     {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "Http404",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
         "label": "HttpResponse",
         "importPath": "django.http",
         "description": "django.http",
@@ -24,6 +56,14 @@
         "documentation": {}
     },
     {
+        "label": "HttpResponseForbidden",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
         "label": "JsonResponse",
         "importPath": "django.http",
         "description": "django.http",
@@ -37,6 +77,38 @@
         "description": "django.http",
         "isExtraImport": true,
         "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
         "documentation": {}
     },
     {
@@ -185,6 +257,38 @@
     },
     {
         "label": "Contact",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Document",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Document",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Chemist",
+        "importPath": "core.models",
+        "description": "core.models",
+        "isExtraImport": true,
+        "detail": "core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Document",
         "importPath": "core.models",
         "description": "core.models",
         "isExtraImport": true,
@@ -402,39 +506,7 @@
         "documentation": {}
     },
     {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
         "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
         "isExtraImport": true,
@@ -490,11 +562,67 @@
         "documentation": {}
     },
     {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
         "isExtraImport": true,
-        "detail": "django.contrib",
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "Q",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
         "documentation": {}
     },
     {
@@ -611,6 +739,198 @@
     },
     {
         "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -923,12 +1243,19 @@
         "documentation": {}
     },
     {
-        "label": "socket",
-        "kind": 6,
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
         "isExtraImport": true,
-        "importPath": "socket",
-        "description": "socket",
-        "detail": "socket",
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
         "documentation": {}
     },
     {
@@ -1107,6 +1434,62 @@
         "documentation": {}
     },
     {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
         "label": "template",
         "importPath": "django",
         "description": "django",
@@ -1228,15 +1611,6 @@
         "documentation": {}
     },
     {
-        "label": "redis",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "redis",
-        "description": "redis",
-        "detail": "redis",
-        "documentation": {}
-    },
-    {
         "label": "AddContactView",
         "kind": 6,
         "importPath": "ChemProject.ChemChat.views_classes.add_contact_view",
@@ -1259,7 +1633,16 @@
         "kind": 6,
         "importPath": "ChemProject.ChemChat.views_classes.chat_view",
         "description": "ChemProject.ChemChat.views_classes.chat_view",
-        "peekOfCode": "class ChatView(View):\n    def get(self, request):\n        if request.user.is_authenticated:\n            contact_list = Contact.objects.filter(user=request.user.id)\n            if not contact_list:\n                contact_list = Contact.objects.filter(contact=request.user.id)\n            if contact_list:\n                contact = contact_list.first()\n                if contact.user == request.user:\n                    receiver = contact.contact",
+        "peekOfCode": "class ChatView(View):\n    def get(self, request):\n        if request.user.is_authenticated:\n            contacts_data = get_contacts_data(request)\n            if contacts_data:\n                context = {\n                    'contacts': contacts_data,\n                    'title': 'ChemChat',\n                }\n                return render(request, 'ChemChat/chat.html', context)",
+        "detail": "ChemProject.ChemChat.views_classes.chat_view",
+        "documentation": {}
+    },
+    {
+        "label": "get_contacts_data",
+        "kind": 2,
+        "importPath": "ChemProject.ChemChat.views_classes.chat_view",
+        "description": "ChemProject.ChemChat.views_classes.chat_view",
+        "peekOfCode": "def get_contacts_data(request):\n    contact_list = Contact.objects.filter(user=request.user.id)\n    if not contact_list.exists():\n        contact_list = Contact.objects.filter(contact=request.user.id)\n    contacts_data = []\n    for contact in contact_list:\n        if contact.user == request.user:\n            contact_object = contact.contact\n        else:\n            contact_object = contact.user",
         "detail": "ChemProject.ChemChat.views_classes.chat_view",
         "documentation": {}
     },
@@ -1268,7 +1651,7 @@
         "kind": 6,
         "importPath": "ChemProject.ChemChat.views_classes.chat_with_chat_id_view",
         "description": "ChemProject.ChemChat.views_classes.chat_with_chat_id_view",
-        "peekOfCode": "class ChatWithIDView(View):\n    def get(self, request, chat_id):\n        contact_list = Contact.objects.filter(user=request.user.id)\n        if not contact_list:\n            contact_list = Contact.objects.filter(contact=request.user.id)\n        chat = contact_list.get(id=chat_id)\n        if chat.user == request.user:\n            receiver = chat.contact\n            sender = chat.user\n        else:",
+        "peekOfCode": "class ChatWithIDView(View):\n    def get(self, request, chat_id):\n        contacts_data = get_contacts_data(request)\n        for contact in contacts_data:\n            if contact['chat_id'] == chat_id:\n                phone = contact['phone']\n                username = contact['username']\n                contact_id = contact['id']\n                break\n        try:",
         "detail": "ChemProject.ChemChat.views_classes.chat_with_chat_id_view",
         "documentation": {}
     },
@@ -1318,12 +1701,30 @@
         "documentation": {}
     },
     {
+        "label": "AddAllowedUserView",
+        "kind": 6,
+        "importPath": "ChemProject.ChemDocument.views_classes.add_allowed_user_view",
+        "description": "ChemProject.ChemDocument.views_classes.add_allowed_user_view",
+        "peekOfCode": "class AddAllowedUserView(View):\n    def post(self, request):\n        if request.user.is_authenticated:\n            try:\n                data = json.loads(request.body)\n                id = data.get('doc_id')\n                document = Document.objects.get(id=id)\n                if document.owner != request.user:\n                    return JsonResponse({'error': 'You are not the owner of this document.'}, status=403)\n                else:",
+        "detail": "ChemProject.ChemDocument.views_classes.add_allowed_user_view",
+        "documentation": {}
+    },
+    {
         "label": "CreateNewDocView",
         "kind": 6,
         "importPath": "ChemProject.ChemDocument.views_classes.create_new_doc_view",
         "description": "ChemProject.ChemDocument.views_classes.create_new_doc_view",
-        "peekOfCode": "class CreateNewDocView(View):\n    def post(self, request):\n        curent_user = request.user\n        doc = Document.objects.create(title=\"Документ Без Назви\", creator=curent_user)\n        context = {\n            \"doc\": {\n                \"id\": doc.id,\n                \"title\": doc.title,\n            }\n        }",
+        "peekOfCode": "class CreateNewDocView(View):\n    def post(self, request):\n        data = json.loads(request.body)\n        title = data.get(\"title\")\n        icon = data.get(\"icon\")\n        if not title:\n            title = \"Документ Без Назви\"\n        if not icon:\n            icon = \"doc-icon\"\n        curent_user = request.user",
         "detail": "ChemProject.ChemDocument.views_classes.create_new_doc_view",
+        "documentation": {}
+    },
+    {
+        "label": "DeleteDocumentView",
+        "kind": 6,
+        "importPath": "ChemProject.ChemDocument.views_classes.delete_document_view",
+        "description": "ChemProject.ChemDocument.views_classes.delete_document_view",
+        "peekOfCode": "class DeleteDocumentView(View):\n    def post(self, request):\n        if not request.user.is_authenticated:\n            return JsonResponse({'error': 'Unauthorized'}, status=401)\n        try:\n            data = json.loads(request.body)\n            doc_id = data.get(\"doc_id\")\n            if not doc_id:\n                return JsonResponse({'error': 'Missing document ID'}, status=400)\n            Document.objects.get(id=doc_id, owner=request.user).delete()",
+        "detail": "ChemProject.ChemDocument.views_classes.delete_document_view",
         "documentation": {}
     },
     {
@@ -1331,7 +1732,7 @@
         "kind": 6,
         "importPath": "ChemProject.ChemDocument.views_classes.document_view",
         "description": "ChemProject.ChemDocument.views_classes.document_view",
-        "peekOfCode": "class DocumentView(View):\n    def get(self, request):\n        if request.user.is_authenticated:\n            docs = Document.objects.filter(creator=request.user)\n            return render(request, 'ChemDocument/document.html', {'docs': docs, \n                                                                  'title': 'ChemDocument', \n                                                                  'is_doc_page': True})\n        else:\n            return redirect('auth')",
+        "peekOfCode": "class DocumentView(View):\n    def get(self, request):\n        if request.user.is_authenticated:\n            docs = Document.objects.filter(owner=request.user)\n            context = {\n                'docs': docs,\n                'title': 'ChemDocument',\n                'is_doc_page': True,\n                'icons_list_1': ['doc-icon', 'doc-profile-icon', 'document-2-icon', 'document-3-icon'],\n                'icons_list_2': ['docx-icon', 'file-icon', 'pdf-icon', 'to-do-icon'],",
         "detail": "ChemProject.ChemDocument.views_classes.document_view",
         "documentation": {}
     },
@@ -1340,8 +1741,17 @@
         "kind": 6,
         "importPath": "ChemProject.ChemDocument.views_classes.document_with_id_view",
         "description": "ChemProject.ChemDocument.views_classes.document_with_id_view",
-        "peekOfCode": "class DocumentWithIdView(View):\n    def get(self, request, document_id):\n        if request.user.is_authenticated:\n            doc = Document.objects.filter(id=document_id).first()\n            context =  {'document_id': document_id, \n                        'title': 'ChemDocument',\n                        'document': doc,\n                        'document_text': doc.text,\n                        }\n            return render(request, 'ChemDocument/document.html', context)",
+        "peekOfCode": "class DocumentWithIdView(View):\n    def get(self, request, document_id):\n        if not request.user.is_authenticated:\n            return redirect('auth')\n        document = Document.objects.filter(id=document_id).first()\n        if document.is_private:\n            if document.owner == request.user or request.user in document.allowed_users.all():\n                context = {\n                    'document_id': document_id,\n                    'title': 'ChemDocument',",
         "detail": "ChemProject.ChemDocument.views_classes.document_with_id_view",
+        "documentation": {}
+    },
+    {
+        "label": "SaveSettingsView",
+        "kind": 6,
+        "importPath": "ChemProject.ChemDocument.views_classes.save_settings_view",
+        "description": "ChemProject.ChemDocument.views_classes.save_settings_view",
+        "peekOfCode": "class SaveSettingsView(View):\n    def post(self, request):\n        if request.user.is_authenticated:\n            try:\n                data = json.loads(request.body)\n                id = data.get(\"doc_id\")\n                document = Document.objects.filter(id=id).first()\n                if document.owner != request.user:\n                    return JsonResponse({'error': 'You are not the owner of this document.'}, status=403)\n                else:",
+        "detail": "ChemProject.ChemDocument.views_classes.save_settings_view",
         "documentation": {}
     },
     {
@@ -1385,7 +1795,7 @@
         "kind": 5,
         "importPath": "ChemProject.ChemDocument.urls",
         "description": "ChemProject.ChemDocument.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', DocumentView.as_view(), name='document'),\n    path('create-new-doc/', CreateNewDocView.as_view()),\n    path('<str:document_id>/', DocumentWithIdView.as_view(), name='document_with_id'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', DocumentView.as_view(), name='document'),\n    path('create-new-doc/', CreateNewDocView.as_view()),   \n    path('delete-document/', DeleteDocumentView.as_view()),\n    path('save-settings/', SaveSettingsView.as_view()),\n    path('add-allowed-user/', AddAllowedUserView.as_view()),\n    path('<str:document_id>/', DocumentWithIdView.as_view(), name='document_with_id'),\n]",
         "detail": "ChemProject.ChemDocument.urls",
         "documentation": {}
     },
@@ -1396,15 +1806,6 @@
         "description": "ChemProject.ChemProject.asgi",
         "peekOfCode": "application = ProtocolTypeRouter({\n    \"http\": get_asgi_application(),\n    \"websocket\": AuthMiddlewareStack(\n        URLRouter(\n            websocket_urlpatterns\n        )\n    ),\n})",
         "detail": "ChemProject.ChemProject.asgi",
-        "documentation": {}
-    },
-    {
-        "label": "host",
-        "kind": 5,
-        "importPath": "ChemProject.ChemProject.settings",
-        "description": "ChemProject.ChemProject.settings",
-        "peekOfCode": "host = socket.gethostbyname(socket.gethostname())\nload_dotenv()\n# Build paths inside the project like this: BASE_DIR / 'subdir'.\nBASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.getenv('SECRET_KEY')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True",
-        "detail": "ChemProject.ChemProject.settings",
         "documentation": {}
     },
     {
@@ -1457,7 +1858,7 @@
         "kind": 5,
         "importPath": "ChemProject.ChemProject.settings",
         "description": "ChemProject.ChemProject.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'whitenoise.middleware.WhiteNoiseMiddleware',\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
+        "peekOfCode": "MIDDLEWARE = [\n    'whitenoise.middleware.WhiteNoiseMiddleware',\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n    'core.middlewares.admin_ip_restrict.AdminIPRestrictionMiddleware',",
         "detail": "ChemProject.ChemProject.settings",
         "documentation": {}
     },
@@ -1484,7 +1885,7 @@
         "kind": 5,
         "importPath": "ChemProject.ChemProject.settings",
         "description": "ChemProject.ChemProject.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'ChemProject.wsgi.application'\nASGI_APPLICATION = 'ChemProject.asgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}",
+        "peekOfCode": "WSGI_APPLICATION = 'ChemProject.wsgi.application'\nASGI_APPLICATION = 'ChemProject.asgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n        \"ATOMIC_REQUESTS\": True,\n    }",
         "detail": "ChemProject.ChemProject.settings",
         "documentation": {}
     },
@@ -1493,7 +1894,7 @@
         "kind": 5,
         "importPath": "ChemProject.ChemProject.settings",
         "description": "ChemProject.ChemProject.settings",
-        "peekOfCode": "ASGI_APPLICATION = 'ChemProject.asgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
+        "peekOfCode": "ASGI_APPLICATION = 'ChemProject.asgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n        \"ATOMIC_REQUESTS\": True,\n    }\n}",
         "detail": "ChemProject.ChemProject.settings",
         "documentation": {}
     },
@@ -1502,7 +1903,7 @@
         "kind": 5,
         "importPath": "ChemProject.ChemProject.settings",
         "description": "ChemProject.ChemProject.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n        \"ATOMIC_REQUESTS\": True,\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [",
         "detail": "ChemProject.ChemProject.settings",
         "documentation": {}
     },
@@ -1714,6 +2115,15 @@
         "documentation": {}
     },
     {
+        "label": "AdminIPRestrictionMiddleware",
+        "kind": 6,
+        "importPath": "ChemProject.core.middlewares.admin_ip_restrict",
+        "description": "ChemProject.core.middlewares.admin_ip_restrict",
+        "peekOfCode": "class AdminIPRestrictionMiddleware:\n    def __init__(self, get_response):\n        dotenv_path = r\"D:\\Vitaliy\\Документи\\Коди\\GitHub\\ChemProject\\ChemProject\\.env\"\n        load_dotenv(dotenv_path)\n        raw_ips = os.getenv('MY_IP', '')\n        self.ALLOWED_IPS = [ip.strip() for ip in raw_ips.split(',') if ip.strip()]\n        self.get_response = get_response\n    def __call__(self, request):\n        if request.path.startswith('/admin/'):\n            print(f\"[middleware] ALLOWED_IPS: {self.ALLOWED_IPS}\")",
+        "detail": "ChemProject.core.middlewares.admin_ip_restrict",
+        "documentation": {}
+    },
+    {
         "label": "Migration",
         "kind": 6,
         "importPath": "ChemProject.core.migrations.0001_initial",
@@ -1741,6 +2151,114 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "ChemProject.core.migrations.0004_document_icon_alter_document_title",
+        "description": "ChemProject.core.migrations.0004_document_icon_alter_document_title",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0003_document'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='document',\n            name='icon',\n            field=models.TextField(null=True),\n        ),",
+        "detail": "ChemProject.core.migrations.0004_document_icon_alter_document_title",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "ChemProject.core.migrations.0005_alter_document_icon",
+        "description": "ChemProject.core.migrations.0005_alter_document_icon",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0004_document_icon_alter_document_title'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='document',\n            name='icon',\n            field=models.CharField(max_length=20, null=True),\n        ),",
+        "detail": "ChemProject.core.migrations.0005_alter_document_icon",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "ChemProject.core.migrations.0006_alter_document_icon",
+        "description": "ChemProject.core.migrations.0006_alter_document_icon",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0005_alter_document_icon'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='document',\n            name='icon',\n            field=models.CharField(default='doc-icon', max_length=20),\n        ),",
+        "detail": "ChemProject.core.migrations.0006_alter_document_icon",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "ChemProject.core.migrations.0007_document_allowed_users_document_is_private",
+        "description": "ChemProject.core.migrations.0007_document_allowed_users_document_is_private",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0006_alter_document_icon'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='document',\n            name='allowed_users',\n            field=models.ManyToManyField(null=True, related_name='allowed_users', to=settings.AUTH_USER_MODEL),\n        ),",
+        "detail": "ChemProject.core.migrations.0007_document_allowed_users_document_is_private",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "ChemProject.core.migrations.0008_alter_document_allowed_users",
+        "description": "ChemProject.core.migrations.0008_alter_document_allowed_users",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0007_document_allowed_users_document_is_private'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='document',\n            name='allowed_users',\n            field=models.ManyToManyField(related_name='allowed_users', to=settings.AUTH_USER_MODEL),\n        ),",
+        "detail": "ChemProject.core.migrations.0008_alter_document_allowed_users",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "ChemProject.core.migrations.0009_document_is_show",
+        "description": "ChemProject.core.migrations.0009_document_is_show",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0008_alter_document_allowed_users'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='document',\n            name='is_show',\n            field=models.BooleanField(default=True),\n        ),",
+        "detail": "ChemProject.core.migrations.0009_document_is_show",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "ChemProject.core.migrations.0010_alter_document_allowed_users",
+        "description": "ChemProject.core.migrations.0010_alter_document_allowed_users",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0009_document_is_show'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='document',\n            name='allowed_users',\n            field=models.ManyToManyField(blank=True, related_name='allowed_users', to=settings.AUTH_USER_MODEL),\n        ),",
+        "detail": "ChemProject.core.migrations.0010_alter_document_allowed_users",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "ChemProject.core.migrations.0011_remove_document_creator_document_owner",
+        "description": "ChemProject.core.migrations.0011_remove_document_creator_document_owner",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0010_alter_document_allowed_users'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='document',\n            name='creator',\n        ),\n        migrations.AddField(",
+        "detail": "ChemProject.core.migrations.0011_remove_document_creator_document_owner",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "ChemProject.core.migrations.0012_alter_document_allowed_users",
+        "description": "ChemProject.core.migrations.0012_alter_document_allowed_users",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0011_remove_document_creator_document_owner'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='document',\n            name='allowed_users',\n            field=models.ManyToManyField(related_name='documents_with_access', to=settings.AUTH_USER_MODEL),\n        ),",
+        "detail": "ChemProject.core.migrations.0012_alter_document_allowed_users",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "ChemProject.core.migrations.0013_alter_document_allowed_users",
+        "description": "ChemProject.core.migrations.0013_alter_document_allowed_users",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0012_alter_document_allowed_users'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='document',\n            name='allowed_users',\n            field=models.ManyToManyField(blank=True, related_name='allowed_users', to=settings.AUTH_USER_MODEL),\n        ),",
+        "detail": "ChemProject.core.migrations.0013_alter_document_allowed_users",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "ChemProject.core.migrations.0014_alter_document_allowed_users",
+        "description": "ChemProject.core.migrations.0014_alter_document_allowed_users",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0013_alter_document_allowed_users'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='document',\n            name='allowed_users',\n            field=models.ManyToManyField(blank=True, related_name='accessible_documents', to=settings.AUTH_USER_MODEL),\n        ),",
+        "detail": "ChemProject.core.migrations.0014_alter_document_allowed_users",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "ChemProject.core.migrations.0015_alter_document_is_private",
+        "description": "ChemProject.core.migrations.0015_alter_document_is_private",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('core', '0014_alter_document_allowed_users'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='document',\n            name='is_private',\n            field=models.BooleanField(default=True),\n        ),",
+        "detail": "ChemProject.core.migrations.0015_alter_document_is_private",
+        "documentation": {}
+    },
+    {
         "label": "Chemist",
         "kind": 6,
         "importPath": "ChemProject.core.models.chemist",
@@ -1763,7 +2281,7 @@
         "kind": 6,
         "importPath": "ChemProject.core.models.document",
         "description": "ChemProject.core.models.document",
-        "peekOfCode": "class Document(models.Model):\n    title = models.CharField(max_length=80)\n    text = models.TextField()\n    creator = models.ForeignKey('Chemist', on_delete=models.CASCADE, related_name='creator')\n    date = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return self.title",
+        "peekOfCode": "class Document(models.Model):\n    title = models.CharField(max_length=80)\n    text = models.TextField()\n    owner = models.ForeignKey('Chemist', on_delete=models.CASCADE, related_name='owner', null=True)\n    icon = models.CharField(max_length=20, default='doc-icon')\n    date = models.DateTimeField(auto_now_add=True)\n    allowed_users = models.ManyToManyField(Chemist, blank=True, related_name='accessible_documents')\n    is_private = models.BooleanField(default=True)\n    is_show = models.BooleanField(default=True)\n    def __str__(self):",
         "detail": "ChemProject.core.models.document",
         "documentation": {}
     },
@@ -1862,7 +2380,7 @@
         "kind": 6,
         "importPath": "ChemProject.core.serializer",
         "description": "ChemProject.core.serializer",
-        "peekOfCode": "class MoleculeSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Molecule\n        fields = \"__all__\"",
+        "peekOfCode": "class MoleculeSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Molecule\n        fields = [\"id\", \"name\", \"formula\", \"created_at\"]\n        read_only_fields = [\"id\"]",
         "detail": "ChemProject.core.serializer",
         "documentation": {}
     },
@@ -1871,7 +2389,7 @@
         "kind": 5,
         "importPath": "ChemProject.core.urls",
         "description": "ChemProject.core.urls",
-        "peekOfCode": "handler404 = 'your_project.views.custom_page_not_found'\nhandler500 = 'your_project.views.custom_error_view'\nrouter = routers.DefaultRouter()\nrouter.register(r'molecule-history', MoluculeAPIView, basename='molecule-history')\nurlpatterns = [\n    path('', views.index, name='index'),\n    path('google45b8458dd0908687.html', views.copyright_for_google),\n    path('auth/', views.auth, name='auth'),\n    path('about/', views.about, name='about'),\n    path('what_are_smiles/', views.what_are_smiles, name=\"what_are_smiles\"),",
+        "peekOfCode": "handler404 = 'your_project.views.custom_page_not_found'\nhandler500 = 'your_project.views.custom_error_view'\nrouter = routers.DefaultRouter()\nrouter.register(r'molecule-history', MoluculeAPIView, basename='molecule-history')\nurlpatterns = [\n    path('', views.index, name='index'),\n    path('google45b8458dd0908687.html', views.copyright_for_google),\n    path('auth/', views.auth, name='auth'),\n    path('my-ip/', views.my_ip_view),\n    path('about/', views.about, name='about'),",
         "detail": "ChemProject.core.urls",
         "documentation": {}
     },
@@ -1880,7 +2398,7 @@
         "kind": 5,
         "importPath": "ChemProject.core.urls",
         "description": "ChemProject.core.urls",
-        "peekOfCode": "handler500 = 'your_project.views.custom_error_view'\nrouter = routers.DefaultRouter()\nrouter.register(r'molecule-history', MoluculeAPIView, basename='molecule-history')\nurlpatterns = [\n    path('', views.index, name='index'),\n    path('google45b8458dd0908687.html', views.copyright_for_google),\n    path('auth/', views.auth, name='auth'),\n    path('about/', views.about, name='about'),\n    path('what_are_smiles/', views.what_are_smiles, name=\"what_are_smiles\"),\n    path('logout/', views.logout, name='logout'),",
+        "peekOfCode": "handler500 = 'your_project.views.custom_error_view'\nrouter = routers.DefaultRouter()\nrouter.register(r'molecule-history', MoluculeAPIView, basename='molecule-history')\nurlpatterns = [\n    path('', views.index, name='index'),\n    path('google45b8458dd0908687.html', views.copyright_for_google),\n    path('auth/', views.auth, name='auth'),\n    path('my-ip/', views.my_ip_view),\n    path('about/', views.about, name='about'),\n    path('what_are_smiles/', views.what_are_smiles, name=\"what_are_smiles\"),",
         "detail": "ChemProject.core.urls",
         "documentation": {}
     },
@@ -1889,7 +2407,7 @@
         "kind": 5,
         "importPath": "ChemProject.core.urls",
         "description": "ChemProject.core.urls",
-        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(r'molecule-history', MoluculeAPIView, basename='molecule-history')\nurlpatterns = [\n    path('', views.index, name='index'),\n    path('google45b8458dd0908687.html', views.copyright_for_google),\n    path('auth/', views.auth, name='auth'),\n    path('about/', views.about, name='about'),\n    path('what_are_smiles/', views.what_are_smiles, name=\"what_are_smiles\"),\n    path('logout/', views.logout, name='logout'),\n    path('auth/', AuthView.as_view(), name='auth'),",
+        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register(r'molecule-history', MoluculeAPIView, basename='molecule-history')\nurlpatterns = [\n    path('', views.index, name='index'),\n    path('google45b8458dd0908687.html', views.copyright_for_google),\n    path('auth/', views.auth, name='auth'),\n    path('my-ip/', views.my_ip_view),\n    path('about/', views.about, name='about'),\n    path('what_are_smiles/', views.what_are_smiles, name=\"what_are_smiles\"),\n    path('logout/', views.logout, name='logout'),",
         "detail": "ChemProject.core.urls",
         "documentation": {}
     },
@@ -1898,7 +2416,7 @@
         "kind": 5,
         "importPath": "ChemProject.core.urls",
         "description": "ChemProject.core.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='index'),\n    path('google45b8458dd0908687.html', views.copyright_for_google),\n    path('auth/', views.auth, name='auth'),\n    path('about/', views.about, name='about'),\n    path('what_are_smiles/', views.what_are_smiles, name=\"what_are_smiles\"),\n    path('logout/', views.logout, name='logout'),\n    path('auth/', AuthView.as_view(), name='auth'),\n    path('auth-post/', AuthPostView.as_view()),\n    path('send-name/', SendNameView.as_view(), name=\"send-name\"),",
+        "peekOfCode": "urlpatterns = [\n    path('', views.index, name='index'),\n    path('google45b8458dd0908687.html', views.copyright_for_google),\n    path('auth/', views.auth, name='auth'),\n    path('my-ip/', views.my_ip_view),\n    path('about/', views.about, name='about'),\n    path('what_are_smiles/', views.what_are_smiles, name=\"what_are_smiles\"),\n    path('logout/', views.logout, name='logout'),\n    path('auth/', AuthView.as_view(), name='auth'),\n    path('auth-post/', AuthPostView.as_view()),",
         "detail": "ChemProject.core.urls",
         "documentation": {}
     },
@@ -1934,7 +2452,7 @@
         "kind": 2,
         "importPath": "ChemProject.core.views",
         "description": "ChemProject.core.views",
-        "peekOfCode": "def about(request):\n    return render(request, 'about.html', {'title': 'ChemProject'})\ndef what_are_smiles(request):\n    return render(request, 'what_are_smiles.html', {'title': 'ChemProject'})\ndef logout(request):\n    django_logout(request)\n    return redirect('auth')\ndef copyright_for_google(request):\n    return render(request, 'google45b8458dd0908687.html')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):",
+        "peekOfCode": "def about(request):\n    return render(request, 'about.html', {'title': 'ChemProject'})\ndef what_are_smiles(request):\n    return render(request, 'what_are_smiles.html', {'title': 'ChemProject'})\ndef logout(request):\n    django_logout(request)\n    return redirect('auth')\ndef copyright_for_google(request):\n    return render(request, 'google45b8458dd0908687.html')\ndef my_ip_view(request):",
         "detail": "ChemProject.core.views",
         "documentation": {}
     },
@@ -1943,7 +2461,7 @@
         "kind": 2,
         "importPath": "ChemProject.core.views",
         "description": "ChemProject.core.views",
-        "peekOfCode": "def what_are_smiles(request):\n    return render(request, 'what_are_smiles.html', {'title': 'ChemProject'})\ndef logout(request):\n    django_logout(request)\n    return redirect('auth')\ndef copyright_for_google(request):\n    return render(request, 'google45b8458dd0908687.html')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
+        "peekOfCode": "def what_are_smiles(request):\n    return render(request, 'what_are_smiles.html', {'title': 'ChemProject'})\ndef logout(request):\n    django_logout(request)\n    return redirect('auth')\ndef copyright_for_google(request):\n    return render(request, 'google45b8458dd0908687.html')\ndef my_ip_view(request):\n    ip = request.META.get('HTTP_X_FORWARDED_FOR') or request.META.get('REMOTE_ADDR')\n    return HttpResponse(f\"Your IP is: {ip}\")",
         "detail": "ChemProject.core.views",
         "documentation": {}
     },
@@ -1952,7 +2470,7 @@
         "kind": 2,
         "importPath": "ChemProject.core.views",
         "description": "ChemProject.core.views",
-        "peekOfCode": "def logout(request):\n    django_logout(request)\n    return redirect('auth')\ndef copyright_for_google(request):\n    return render(request, 'google45b8458dd0908687.html')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
+        "peekOfCode": "def logout(request):\n    django_logout(request)\n    return redirect('auth')\ndef copyright_for_google(request):\n    return render(request, 'google45b8458dd0908687.html')\ndef my_ip_view(request):\n    ip = request.META.get('HTTP_X_FORWARDED_FOR') or request.META.get('REMOTE_ADDR')\n    return HttpResponse(f\"Your IP is: {ip}\")\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()",
         "detail": "ChemProject.core.views",
         "documentation": {}
     },
@@ -1961,7 +2479,16 @@
         "kind": 2,
         "importPath": "ChemProject.core.views",
         "description": "ChemProject.core.views",
-        "peekOfCode": "def copyright_for_google(request):\n    return render(request, 'google45b8458dd0908687.html')\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
+        "peekOfCode": "def copyright_for_google(request):\n    return render(request, 'google45b8458dd0908687.html')\ndef my_ip_view(request):\n    ip = request.META.get('HTTP_X_FORWARDED_FOR') or request.META.get('REMOTE_ADDR')\n    return HttpResponse(f\"Your IP is: {ip}\")\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
+        "detail": "ChemProject.core.views",
+        "documentation": {}
+    },
+    {
+        "label": "my_ip_view",
+        "kind": 2,
+        "importPath": "ChemProject.core.views",
+        "description": "ChemProject.core.views",
+        "peekOfCode": "def my_ip_view(request):\n    ip = request.META.get('HTTP_X_FORWARDED_FOR') or request.META.get('REMOTE_ADDR')\n    return HttpResponse(f\"Your IP is: {ip}\")\nclass MoluculeAPIView(viewsets.ReadOnlyModelViewSet):\n    queryset = Molecule.objects.all()\n    serializer_class = MoleculeSerializer",
         "detail": "ChemProject.core.views",
         "documentation": {}
     },
@@ -1975,11 +2502,11 @@
         "documentation": {}
     },
     {
-        "label": "r",
+        "label": "dotenv_path",
         "kind": 5,
         "importPath": "test",
         "description": "test",
-        "peekOfCode": "r = redis.Redis(host='127.0.0.1', port=6379, db=0)\ntry:\n    result = r.bzpopmin('myzset', timeout=1)\n    print(f\"Result from BZPOPMIN: {result}\")\nexcept redis.exceptions.ResponseError as e:\n    print(f\"Error: {e}\")",
+        "peekOfCode": "dotenv_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.env')\nload_dotenv(dotenv_path)\nprint(f\"{os.getenv('MY_IP', '')}\")",
         "detail": "test",
         "documentation": {}
     }

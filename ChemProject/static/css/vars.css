@@ -1,30 +1,42 @@
-:root {
-  --bg-page-color: #4E4EBF;
-  --bg-button: #31315A;
-  --bg-button-color-hover: #3e3e73;
-  --bg-menu-color: #1D1D2B;
-  --bg-menu-color-translucent: #1D1D2Bc0;
+:root{
+    --btn-bg-color-standart: #FFFFFF;
+    --btn-text-color-standart: #000000;
+    --date-text-color: #A19F9F;
+    --disable-input-text-color: #9b9b9b;
+    --text-bg-color: rgba(0, 0, 0, 0.6);
+    --DocEditor-bg-color: white;
+    --DocEditor-text-color: black;
+    --DocEditor-style-text-btn-bg-color: #FFFFFF;
+    --input-data_of_substance-bg-color: #B2B2DC;
+    --input-data_of_substance-text-color: #000000;
+}
 
-  --DocEditor-bg-color: white;
-  --DocEditor-text-color: black;
-  --style-text-btn-bg-color: #FFFFFF;
+.standart-theme {
+    --pattern-color: #313179;
+    --bg-page-color: #4E4EBF;
+    --bg-button: #31315A;
+    --bg-button-color-hover: #3e3e73;
+    --bg-menu-color: #1D1D2B;
+    --bg-menu-color-translucent: #1D1D2Bc0;
 
-  --paragraph-text-color: #9f9fd3;
-  --color-text: #FFFFFF;
+    --paragraph-text-color: #9f9fd3;
+    --color-text: #FFFFFF;
 
-  --disable-input-color: #9b9b9b;
+    --warning-bg-color: #333383;
 
-  --text-bg-color: rgba(0, 0, 0, 0.6);
+    /* -------Don't change!------- */
+}
 
-  --send-btn-bg-color: #FFFFFF;
+.blue-theme {
+    --pattern-color: #205295;
+    --bg-page-color: #0A2647;
+    --bg-button: #144272;
+    --bg-button-color-hover: #205295;
+    --bg-menu-color: #2C74B3;
+    --bg-menu-color-translucent: #2C74B3c0;
 
-  --warning-bg-color: #333383;
+    --paragraph-text-color: #A9CFF1;
+    --color-text: #FFFFFF;
 
-  --btn-bg-color-standart: #FFFFFF;
-  --btn-text-color-standart: #000000;
-
-  --date-text-color: #A19F9F;
-
-  --input-data_of_substance-bg-color: #B2B2DC;
-  --input-data_of_substance-text-color: #000000
+    --warning-bg-color: #205295;
 }

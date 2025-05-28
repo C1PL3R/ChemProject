@@ -13,9 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 from dotenv import load_dotenv
 import os
-import socket
 
-host = socket.gethostbyname(socket.gethostname())
 
 load_dotenv()
 
@@ -67,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'core.middlewares.admin_ip_restrict.AdminIPRestrictionMiddleware',
 ]
 
 ROOT_URLCONF = 'ChemProject.urls'
@@ -97,6 +96,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+        "ATOMIC_REQUESTS": True,
     }
 }
 

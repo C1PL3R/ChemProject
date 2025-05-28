@@ -17,10 +17,12 @@ h1 {
     flex-direction: column;
     width: 40%;
     min-height: 300px;
+    height: 517px;
     overflow-y: auto;
     padding: 20px;
     background-color: var(--bg-menu-color-translucent);
     border-radius: 10px;
+    overflow-y: auto;
 }
 
 .contacts h1 {
@@ -28,8 +30,6 @@ h1 {
     text-align: center;
     margin-bottom: 10px;
 }
-
-
 
 .chat {
     display: flex;
@@ -63,6 +63,7 @@ h1 {
     transition: background-color 0.3s ease;
     margin-top: auto;
     align-self: flex-end;
+    margin-top: 20px;
 }
 
 #add_contact:hover {
@@ -113,6 +114,14 @@ form {
     border-radius: 10px;
     gap: 10px;
     z-index: 5;
+}
+
+.contact-list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 20px;
 }
 
 .contact {
@@ -217,7 +226,7 @@ form {
 }
 
 .typeZone button {
-    background-color: var(--send-btn-bg-color);
+    background-color: var(--btn-bg-color-standart);
     border: none;
     cursor: pointer;
     min-width: 40px;

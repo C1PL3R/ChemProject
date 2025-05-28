@@ -47,3 +47,35 @@ window.addEventListener('focus', () => {
     var title = document.getElementById('title');
     this.document.title = title.innerText;
 });
+
+function SendDataPost(url, data, successCallback) {
+    axios.post(window.location.origin + url, {
+        data
+    }, {
+        headers: {
+            "X-CSRFToken": getCookie("csrftoken"),
+            "Content-Type": "application/json"
+        }
+    })
+        .then(function (response) {
+            hasUnsavedChanges = false;
+            Swal.fire({
+                title: successCallback,
+                icon: 'success',
+                confirmButtonText: 'ОК'
+            }).then(() => {
+                CloseSettings();
+                window.location.reload();
+            });
+
+        })
+        .catch(function (error) {
+            const errorMessage = error.response?.data?.error || "Сталася помилка!";
+            Swal.fire({
+                title: 'Помилка',
+                text: errorMessage,
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        });
+}

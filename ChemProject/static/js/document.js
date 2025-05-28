@@ -1,67 +1,298 @@
-function getCookie(name) {
-    let cookieValue = null;
-    if (document.cookie && document.cookie !== '') {
-        const cookies = document.cookie.split(';');
-        for (let i = 0; i < cookies.length; i++) {
-            const cookie = cookies[i].trim();
-            if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                break;
-            }
-        }
+var hasUnsavedChanges = false;
+
+
+window.addEventListener('beforeunload', function (e) {
+    if (hasUnsavedChanges) {
+        e.preventDefault();
     }
-    return cookieValue;
+});
+
+var iconName;
+
+var preButton;
+
+function ChooseIcon(icon_name, element) {
+    if (preButton && preButton !== element) {
+        preButton.style.backgroundColor = '#31315a';
+        preButton.setAttribute("title", "Натиснувши ви можете підтвердити вибір іконки");
+    }
+
+    if (preButton !== element) {
+        element.style.backgroundColor = '#678765';
+        iconName = icon_name;
+        preButton = element;
+        element.removeAttribute("title");
+    } else {
+        element.style.backgroundColor = '#31315a';
+        iconName = null;
+
+        element.setAttribute("title", "Натиснувши ви можете підтвердити вибір іконки");
+        preButton = null;
+    }
 }
 
-var createNewDocBtn = document.getElementById("createNewDocBtn")
+
+function CreateNewDoc() {
+    const title = document.getElementById("NewDocInputTitle").value;
+    axios.post(window.location.origin + "/document/create-new-doc/", { title: title, icon: iconName }, {
+        headers: {
+            "X-CSRFToken": getCookie("csrftoken"),
+            "Content-Type": "application/json"
+        }
+    })
+        .then(function (response) {
+            hasUnsavedChanges = false;
+            Swal.fire({
+                title: 'Документ створено',
+                text: "Зайдіть на сторінку, де є список ваших документів, і ви там його побачите! Або почекайте ще трішки часу сторінка сама перезавантажиться!",
+                icon: 'success',
+                confirmButtonText: 'ОК'
+            }).then(() => {
+                var doc = response.data.doc;
+
+                var document_ui = document.createElement("div");
+                document_ui.classList.add("doc");
+
+                var title = document.createElement("a");
+                title.innerText = doc.title;
+                title.href = window.location.origin + "/document/" + doc.id;
+                document_ui.appendChild(title);
+
+                var docs = document.getElementsByClassName("docs");
+                if (docs.length > 0) {
+                    docs[docs.length - 1].appendChild(document_ui);
+                }
+
+                window.location.href = window.location.origin + "/document/" + doc.id;
+
+            });
+
+        })
+        .catch(function (error) {
+            const errorMessage = error.response?.data?.error || "Сталася помилка!";
+            Swal.fire({
+                title: 'Помилка',
+                text: errorMessage,
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        });
+}
+
+function OpenContextMenu(element, docId) {
+    const contextMenu = document.getElementById("customMenu");
+
+    const updateMenuPosition = (x, y) => {
+        const maxLeft = window.innerWidth - contextMenu.offsetWidth;
+        const maxTop = window.innerHeight - contextMenu.offsetHeight;
+        contextMenu.style.left = `${Math.min(maxLeft, x)}px`;
+        contextMenu.style.top = `${Math.min(maxTop, y)}px`;
+    };
+
+    const showMenu = (ev) => {
+        ev.preventDefault();
+        updateMenuPosition(ev.clientX, ev.clientY);
+        contextMenu.style.display = "flex";
+        contextMenu.setAttribute("doc_id", docId);
+
+        document.addEventListener("click", hideMenu, { once: true });
+    };
+
+    const hideMenu = () => {
+        contextMenu.removeAttribute("doc_id");
+        contextMenu.style.display = "none";
+    };
+
+    element.removeEventListener("contextmenu", showMenu);
+    element.addEventListener("contextmenu", showMenu);
+}
+
+function DeleteDocument() {
+    const contextMenu = document.getElementById("customMenu");
+    var doc_id = contextMenu.getAttribute("doc_id");
+
+    Swal.fire({
+        title: 'Ви дійсно хочете видалити цей документ!',
+        text: "",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Так, видалити',
+        cancelButtonText: 'Скасувати'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            axios.post(window.location.origin + "/document/delete-document/", {
+                doc_id: doc_id
+            }, {
+                headers: {
+                    "X-CSRFToken": getCookie("csrftoken"),
+                    "Content-Type": "application/json"
+                }
+            })
+                .then(function (response) {
+                    hasUnsavedChanges = false;
+                    Swal.fire({
+                        title: 'Документ видалено!',
+                        text: "Зайдіть на сторінку, де є список ваших документів, і ви там його побачите! Або почекайте ще трішки часу — сторінка сама перезавантажиться!",
+                        icon: 'success',
+                        confirmButtonText: 'ОК'
+                    }).then(() => {
+                        window.location.href = window.location.origin + "/document/";
+                    });
+                })
+                .catch(function (error) {
+                    const errorMessage = error.response?.data?.error || "Сталася помилка!";
+                    Swal.fire({
+                        title: 'Помилка',
+                        text: errorMessage,
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                });
+        }
+    });
+
+}
+
+var initial_scroll = null;
+
+
+function OpenDocSettings() {
+    const DocSettings = document.getElementById("DocSettings");
+
+    DocSettings.style.display = 'flex';
+    setTimeout(() => {
+        DocSettings.classList.add('show');
+    }, 10);
+
+    document.body.style.overflow = "hidden";
+    initial_scroll = window.scrollY;
+    hasUnsavedChanges = true;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    const currentDocIcon = document.getElementById('currentDocIcon').innerText;
+    const iconBtn = document.getElementById(currentDocIcon);
+    ChooseIcon(currentDocIcon, iconBtn);
+}
+
+function CloseSettings() {
+    const DocSettings = document.getElementById("DocSettings");
+
+    DocSettings.classList.remove('show');
+
+    setTimeout(() => {
+        DocSettings.style.display = 'none';
+        document.body.style.overflow = "";
+    }, 300);
+
+    hasUnsavedChanges = false;
+
+    window.scrollTo({ top: initial_scroll, behavior: 'smooth' });
+}
+
+function SaveSettings() {
+    var DocSettings = document.getElementById("DocumentId");
+    var checkbox = document.getElementById("isPrivate");
+
+    url = "/document/save-settings/";
+    successCallback = 'Налаштування документу збережено!';
+    data = {
+        doc_id: DocSettings.innerText.trim(),
+        is_private: checkbox.checked,
+        icon: iconName,
+    }
+
+    CloseSettings();
+    SendDataPost(url = url, successCallback = successCallback, data = data);
+
+    iconName = null;
+    preButton = null;
+}
+
+document.getElementById('addAllowedUser').addEventListener('click', function () {
+    var emailInput = document.getElementById("allowedUserEmail");
+    var DocSettings = document.getElementById("DocumentId");
+    var email = emailInput.value.trim();
+
+    if (!email) {
+        Swal.fire({
+            title: 'Помилка',
+            text: "Будь ласка, введіть електронну пошту.",
+            icon: 'error',
+            confirmButtonText: 'OK'
+        });
+    }
+
+    if (!emailInput.checkValidity()) {
+        Swal.fire({
+            title: 'Помилка',
+            text: "Введіть правильну електронну пошту.",
+            icon: 'error',
+            confirmButtonText: 'OK'
+        });
+        emailInput.focus();
+        return;
+    }
+    url = "/document/add-allowed-user/";
+    successCallback = 'Користувачеві надано доступ до документу!';
+    data = {
+        doc_id: DocSettings.innerText.trim(),
+        email: email,
+    };
+    SendDataPost(url = url, successCallback = successCallback, data = data);
+});
+
+
+var createNewDocBtn = document.getElementById("createNewDocBtn");
 
 if (createNewDocBtn) {
-    document.getElementById("createNewDocBtn").addEventListener("click", function () {
-        axios.post(window.location.origin + "/document/create-new-doc/", {
-        }, {
-            headers: {
-                "X-CSRFToken": getCookie("csrftoken"),
-                "Content-Type": "application/json"
-            }
-        })
-            .then(function (response) {
-                Swal.fire({
-                    title: 'Документ створено',
-                    text: "Зайдіть на сторінку, де є список ваших документів, і ви там його побачите! Або почекайте ще трішки часу сторінка сама перезавантажиться!",
-                    icon: 'success',
-                    confirmButtonText: 'ОК'
-                }).then(() => {
-                    var doc = response.data.doc;
+    var createDocDiv = document.getElementById('create-doc');
+    createNewDocBtn.addEventListener("click", function () {
+        if (createDocDiv.style.display === 'none' || createDocDiv.style.display === '') {
+            createDocDiv.style.display = 'flex';
+        } else {
+            createDocDiv.style.display = 'none';
+        }
 
-                    var document_ui = document.createElement("div");
-                    document_ui.classList.add("doc");
+        hasUnsavedChanges = true;
+        document.body.style.overflow = "hidden";
+        initial_scroll = window.scrollY;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
-                    var title = document.createElement("a");
-                    title.innerText = doc.title;
-                    title.href = window.location.origin + "/document/" + doc.id;
-                    document_ui.appendChild(title);
+    document.getElementById("close").addEventListener("click", function () {
+        if (createDocDiv.style.display === 'flex' || createDocDiv.style.display === '') {
+            createDocDiv.style.display = 'none';
+        } else {
+            createDocDiv.style.display = 'flex';
+        }
 
-                    var docs = document.getElementsByClassName("docs");
-                    docs[docs.length - 1].appendChild(document_ui);
-                    
-                    setTimeout(() => {
-                        window.location.href = window.location.origin + "/document/" + doc.id;
-                    }, 2000);
-                });
+        hasUnsavedChanges = false;
+        document.body.style.overflow = "";
 
-            })
-            .catch(function (error) {
-                const callback = error.response?.data?.error || "Сталася помилка!";
-            });
+        window.scrollTo({ top: initial_scroll, behavior: 'smooth' });
     });
 }
 
+const checkbox = document.getElementById("isPrivate");
+
+checkbox.addEventListener("change", function () {
+    const allowedUsers = document.getElementById("allowedUsers");
+    if (checkbox.checked) {
+        allowedUsers.style.display = "flex";
+    } else {
+        allowedUsers.style.display = "none";
+    }
+});
+
+// ------------------------------------ WEB SOCKET ------------------------------------//
 document.addEventListener('DOMContentLoaded', function () {
     var documentInput = document.getElementById('docEditor');
     var documentNameInput = document.getElementById('documentNameInput');
     var documentId = document.getElementById('DocumentId');
 
-    if (documentId && documentId.innerText) { // Check if documentId exists and has a value
+    if (documentId && documentId.innerText) {
         const protocol = window.location.protocol === 'https:' ? 'wss://' : 'ws://';
         const chatSocket = new WebSocket(
             protocol + window.location.host + '/ws/document/' + documentId.innerText + '/'
@@ -80,14 +311,14 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         let timeoutId;
-        const delay = 5 * 1000;
+        const delay = 0 * 1000;
 
         documentInput.addEventListener('input', () => {
             clearTimeout(timeoutId);
 
             timeoutId = setTimeout(() => {
                 var text = documentInput.innerHTML;
-                console.log(text)
+                console.log(text);
                 chatSocket.send(JSON.stringify({
                     'text': text,
                 }));
@@ -104,7 +335,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 }));
             }, delay);
         });
-
 
         window.addEventListener('beforeunload', () => {
             chatSocket.close();

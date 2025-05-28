@@ -6,6 +6,7 @@ from rest_framework.decorators import api_view
 from .serializer import MoleculeSerializer
 from django.contrib.auth import logout as django_logout
 from django.shortcuts import redirect
+from django.http import HttpResponse
 
 
 def index(request):
@@ -36,6 +37,12 @@ def logout(request):
 
 def copyright_for_google(request):
     return render(request, 'google45b8458dd0908687.html')
+
+
+
+def my_ip_view(request):
+    ip = request.META.get('HTTP_X_FORWARDED_FOR') or request.META.get('REMOTE_ADDR')
+    return HttpResponse(f"Your IP is: {ip}")
     
 
 class MoluculeAPIView(viewsets.ReadOnlyModelViewSet):

@@ -64,8 +64,8 @@
         {% if contacts %}
             <div class="contact-list" id="contact-list">
                 {% for contact in contacts %}
-                <div class="contact" onclick="location.href='./{{ contact.id }}'">
-                    <p class="contact_name">{{ receiver_name }}</p>
+                <div class="contact" onclick="location.href='/chat/{{ contact.chat_id }}'">
+                    <p class="contact_name">{{ contact.username }}</p>
                 </div>
                 {% endfor %}
             </div>
@@ -89,10 +89,10 @@
         {% if chat_id %}
         <div class="chat-info">
             <div class="receiver-info">
-                <p class="username">{{ receiver_name }}</p>
-                <a class="phone" href="tel:+38{{ receiver_phone }}">+38{{ receiver_phone }}</a>
+                <p class="username">{{ username }}</p>
+                <a class="phone" href="tel:+{{ phone }}">+{{ phone }}</a>
             </div>
-            <button id="settingsChatBtn">
+            <button id="settingsChatBtn">   
                 <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
                     <title>Налаштування чату</title>
                     <g id="more_2_fill" fill='none'>
@@ -121,7 +121,7 @@
                     </button>
                     <button id="delete_chat_btn" onclick="DeleteChat('{{ chat_id }}')">
                         <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
-                            <title>Видалити чат</title>
+                            <title>Видалити контакт</title>
                             <g id="delete_3_fill" fill='none' fill-rule='evenodd'>
                                 <path
                                     d='M24 0v24H0V0zM12.594 23.258l-.012.002-.071.035-.02.004-.014-.004-.071-.036c-.01-.003-.019 0-.024.006l-.004.01-.017.428.005.02.01.013.104.074.015.004.012-.004.104-.074.012-.016.004-.017-.017-.427c-.002-.01-.009-.017-.016-.018m.264-.113-.014.002-.184.093-.01.01-.003.011.018.43.005.012.008.008.201.092c.012.004.023 0 .029-.008l.004-.014-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014-.034.614c0 .012.007.02.017.024l.015-.002.201-.093.01-.008.003-.011.018-.43-.003-.012-.01-.01z' />
@@ -133,7 +133,7 @@
                 </div>
                 <div id="p-container">
                     <p onclick="CleanHistory('{{ chat_id }}')">Очистити історію</p>
-                    <p onclick="DeleteChat('{{ chat_id }}')">Видалити чат</p>
+                    <p onclick="DeleteChat('{{ chat_id }}')">Видалити контакт</p>
                 </div>
             </div>
         </div>
@@ -148,7 +148,7 @@
         </div>
         <div class="typeZone">
             <textarea type="text" placeholder="Повідомлення..." id="messageText" rows="1"></textarea>
-            <button title="Надіслати" id="chat-message-submit"
+            <button title="Надіслати" id="sendMessageBtn"
                 onclick="SendMessage(sender='{{ sender_id }}', receiver='{{ receiver_id }}')">
                 <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'>
                     <title>Надіслати</title>

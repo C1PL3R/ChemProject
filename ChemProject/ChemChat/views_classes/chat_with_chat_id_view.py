@@ -2,47 +2,42 @@ from django.shortcuts import render
 
 from django.views import View
 from core.models import Contact, Message
+from .chat_view import get_contacts_data
 
 
 class ChatWithIDView(View):
     def get(self, request, chat_id):
-        contact_list = Contact.objects.filter(user=request.user.id)
-        if not contact_list:
-            contact_list = Contact.objects.filter(contact=request.user.id)
+        contacts_data = get_contacts_data(request)
 
-        chat = contact_list.get(id=chat_id)
+        for contact in contacts_data:
+            if contact['chat_id'] == chat_id:
+                phone = contact['phone']
+                username = contact['username']
+                contact_id = contact['id']
+                break
 
-        if chat.user == request.user:
-            receiver = chat.contact
-            sender = chat.user
-        else:
-            receiver = chat.user
-            sender = chat.contact
-        
         try:
             messages_list = Message.objects.filter(chat_id=str(chat_id))
         except Exception:
             context = {
-                'contacts': contact_list,
+                'contacts': contacts_data,
                 'chat_id': chat_id,
-                'sender_id': sender.id,
-                'receiver_id': receiver.id,
-                'sender_name': sender.username,
-                'receiver_name': receiver.username,
-                'receiver_phone': receiver.phone,
+                'sender_id': request.user.id,
                 'title': 'ChemChat',
+                'phone': phone,
+                'username': username,
+                'receiver_id': contact_id,
             }
 
             return render(request, 'ChemChat/chat.html', context)
 
         context = {
-            'contacts': contact_list,
+            'contacts': contacts_data,
             'chat_id': chat_id,
-            'sender_id': sender.id,
-            'receiver_id': receiver.id,
-            'sender_name': sender.username,
-            'receiver_name': receiver.username,
-            'receiver_phone': receiver.phone,
+            'sender_id': request.user.id,
+            'phone': phone,
+            'username': username,
+            'receiver_id': contact_id,
             'message_list': messages_list,
             'title': 'ChemChat',
         }

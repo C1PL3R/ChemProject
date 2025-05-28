@@ -41,7 +41,7 @@ button {
     transition: all 0.6s ease-in-out;
 }
 
-button:hover{
+button:hover {
     text-decoration: underline;
     scale: 1.02;
 }
@@ -125,7 +125,7 @@ header {
     width: 100%;
 }
 
-.buttons button:hover{
+.buttons button:hover {
     scale: 1;
     text-decoration: none;
 }
@@ -206,12 +206,14 @@ footer a {
 input:-webkit-autofill {
     box-shadow: 0 0 0px 1000px transparent inset !important;
     -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
-    -webkit-text-fill-color: #fff !important;
+    -webkit-text-fill-color: #000000 !important;
     transition: background-color 5000s ease-in-out 0s;
+    font-family: "Fira Code";
 }
 
 /* Стилізуємо автозаповнення в Firefox */
 input:-moz-placeholder {
     background-color: transparent !important;
     color: #000;
+    font-family: "Fira Code";
 }
